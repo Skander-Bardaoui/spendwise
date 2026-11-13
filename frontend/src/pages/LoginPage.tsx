@@ -66,10 +66,10 @@ export default function LoginPage() {
   return (
     <AuthLayout>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
           Bon retour parmi nous
         </h1>
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
           Connectez-vous à votre espace SpendWise pour suivre vos finances.
         </p>
       </div>
@@ -109,7 +109,7 @@ export default function LoginPage() {
           placeholder="••••••••••••"
           autoComplete="current-password"
           hint={
-            <span className="text-[11px] font-medium text-slate-400">
+            <span className="text-[11px] font-medium text-slate-400 dark:text-slate-500">
               8 caractères minimum
             </span>
           }
@@ -120,7 +120,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all hover:-translate-y-0.5 hover:bg-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-70"
+          className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all hover:-translate-y-0.5 hover:bg-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-70 dark:focus-visible:ring-offset-slate-900"
         >
           {isSubmitting ? (
             <>
@@ -136,11 +136,11 @@ export default function LoginPage() {
         </button>
       </form>
 
-      <p className="mt-6 text-center text-xs text-slate-500">
+      <p className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">
         Pas encore de compte ?{' '}
         <Link
           to="/register"
-          className="font-semibold text-emerald-600 transition-colors hover:text-emerald-700 hover:underline"
+          className="font-semibold text-emerald-600 transition-colors hover:text-emerald-700 hover:underline dark:text-emerald-400 dark:hover:text-emerald-300"
         >
           Créer un compte gratuitement
         </Link>

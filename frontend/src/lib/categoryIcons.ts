@@ -18,7 +18,32 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
   house: House,
   receipt: Receipt,
   'circle-help': CircleHelp,
+  tag: Tag,
 }
+
+export const CATEGORY_ICON_OPTIONS = [
+  { value: 'utensils', label: 'Repas' },
+  { value: 'car', label: 'Transport' },
+  { value: 'heart-pulse', label: 'Santé' },
+  { value: 'gamepad-2', label: 'Loisirs' },
+  { value: 'house', label: 'Logement' },
+  { value: 'receipt', label: 'Factures' },
+  { value: 'tag', label: 'Étiquette' },
+  { value: 'circle-help', label: 'Autre' },
+]
+
+export const CATEGORY_COLOR_OPTIONS = [
+  '#F59E0B',
+  '#3B82F6',
+  '#EF4444',
+  '#8B5CF6',
+  '#10B981',
+  '#6366F1',
+  '#64748B',
+  '#EC4899',
+  '#14B8A6',
+  '#F97316',
+]
 
 export function getCategoryIcon(icon: string | null) {
   return (icon && CATEGORY_ICONS[icon]) || Tag

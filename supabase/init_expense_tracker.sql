@@ -80,6 +80,9 @@ create index expenses_category_id_idx
 create index expenses_recurring_id_idx
   on public.expenses (recurring_id);
 
+create unique index expenses_recurring_occurrence_unique
+  on public.expenses (recurring_id, expense_date);
+
 create index categories_user_id_idx
   on public.categories (user_id)
   where user_id is not null;
@@ -134,6 +137,155 @@ group by e.user_id, e.category_id, c.name, date_trunc('month', e.expense_date)::
 
 grant select on public.expenses_by_category_month to authenticated;
 revoke all on public.expenses_by_category_month from anon;
+
+-- ---------------------------------------------------------------------------
+-- Vue de statut des budgets (dépensé / limite + seuil d'alerte)
+-- ---------------------------------------------------------------------------
+
+create or replace view public.budget_status
+with (security_invoker = true)
+as
+select
+  b.id as budget_id,
+  b.user_id,
+  b.category_id,
+  c.name as category_name,
+  c.icon as category_icon,
+  c.color as category_color,
+  b.month,
+  b.amount_limit,
+  b.alert_threshold,
+  round(coalesce(sum(e.amount), 0), 3) as spent_amount,
+  round(b.amount_limit - coalesce(sum(e.amount), 0), 3) as remaining_amount,
+  case
+    when coalesce(sum(e.amount), 0) >= b.amount_limit then 'exceeded'
+    when coalesce(sum(e.amount), 0) >= b.amount_limit * b.alert_threshold / 100.0
+      then 'warning'
+    else 'ok'
+  end as status
+from public.budgets b
+left join public.categories c on c.id = b.category_id
+left join public.expenses e
+  on e.user_id = b.user_id
+ and e.expense_date >= b.month
+ and e.expense_date < (b.month + interval '1 month')::date
+ and (b.category_id is null or e.category_id = b.category_id)
+group by
+  b.id,
+  b.user_id,
+  b.category_id,
+  c.name,
+  c.icon,
+  c.color,
+  b.month,
+  b.amount_limit,
+  b.alert_threshold;
+
+grant select on public.budget_status to authenticated;
+revoke all on public.budget_status from anon;
+
+-- ---------------------------------------------------------------------------
+-- Vues agrégées du tableau de bord
+-- ---------------------------------------------------------------------------
+
+create or replace view public.dashboard_daily_stats
+with (security_invoker = true)
+as
+select
+  e.user_id,
+  date_trunc('month', e.expense_date)::date as month,
+  e.expense_date as day,
+  round(sum(e.amount), 3) as total_amount,
+  count(*) as expense_count
+from public.expenses e
+group by
+  e.user_id,
+  date_trunc('month', e.expense_date)::date,
+  e.expense_date;
+
+create or replace view public.dashboard_monthly_stats
+with (security_invoker = true)
+as
+select
+  e.user_id,
+  date_trunc('month', e.expense_date)::date as month,
+  round(sum(e.amount), 3) as total_amount,
+  count(*) as expense_count
+from public.expenses e
+group by e.user_id, date_trunc('month', e.expense_date)::date;
+
+create or replace view public.dashboard_category_stats
+with (security_invoker = true)
+as
+select
+  e.user_id,
+  date_trunc('month', e.expense_date)::date as month,
+  e.category_id,
+  c.name as category_name,
+  c.icon as category_icon,
+  c.color as category_color,
+  round(sum(e.amount), 3) as total_amount,
+  count(*) as expense_count
+from public.expenses e
+left join public.categories c on c.id = e.category_id
+group by
+  e.user_id,
+  date_trunc('month', e.expense_date)::date,
+  e.category_id,
+  c.name,
+  c.icon,
+  c.color;
+
+create or replace view public.dashboard_merchant_stats
+with (security_invoker = true)
+as
+select
+  e.user_id,
+  date_trunc('month', e.expense_date)::date as month,
+  e.merchant,
+  round(sum(e.amount), 3) as total_amount,
+  count(*) as expense_count
+from public.expenses e
+group by
+  e.user_id,
+  date_trunc('month', e.expense_date)::date,
+  e.merchant;
+
+create or replace view public.dashboard_recent_expenses
+with (security_invoker = true)
+as
+select
+  e.id,
+  e.user_id,
+  e.category_id,
+  c.name as category_name,
+  c.icon as category_icon,
+  c.color as category_color,
+  e.merchant,
+  e.amount,
+  e.expense_date,
+  e.note,
+  e.payment_method,
+  e.created_at,
+  date_trunc('month', e.expense_date)::date as month,
+  row_number() over (
+    partition by e.user_id, date_trunc('month', e.expense_date)
+    order by e.expense_date desc, e.created_at desc
+  ) as month_rank
+from public.expenses e
+left join public.categories c on c.id = e.category_id;
+
+grant select on public.dashboard_daily_stats to authenticated;
+grant select on public.dashboard_monthly_stats to authenticated;
+grant select on public.dashboard_category_stats to authenticated;
+grant select on public.dashboard_merchant_stats to authenticated;
+grant select on public.dashboard_recent_expenses to authenticated;
+
+revoke all on public.dashboard_daily_stats from anon;
+revoke all on public.dashboard_monthly_stats from anon;
+revoke all on public.dashboard_category_stats from anon;
+revoke all on public.dashboard_merchant_stats from anon;
+revoke all on public.dashboard_recent_expenses from anon;
 
 -- ---------------------------------------------------------------------------
 -- Création automatique du profil à l'inscription

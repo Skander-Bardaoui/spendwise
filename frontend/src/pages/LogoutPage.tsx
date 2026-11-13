@@ -34,9 +34,9 @@ export default function LogoutPage() {
   }, [navigate])
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
-      <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+    <main className="flex min-h-screen items-center justify-center bg-slate-50 px-4 dark:bg-slate-950">
+      <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
           {error ? (
             <LogOut className="h-6 w-6" aria-hidden="true" />
           ) : (
@@ -44,13 +44,13 @@ export default function LogoutPage() {
           )}
         </div>
 
-        <h1 className="mt-4 text-lg font-semibold text-slate-900">
+        <h1 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">
           {error ? 'Déconnexion impossible' : 'Déconnexion en cours…'}
         </h1>
 
         {error ? (
           <>
-            <p className="mt-2 text-sm text-slate-500">{error}</p>
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{error}</p>
             <Link
               to="/"
               className="mt-5 inline-flex h-10 items-center justify-center rounded-lg bg-emerald-500 px-4 text-sm font-semibold text-white transition-colors hover:bg-emerald-600"
@@ -59,7 +59,7 @@ export default function LogoutPage() {
             </Link>
           </>
         ) : (
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
             Fermeture sécurisée de votre session.
           </p>
         )}

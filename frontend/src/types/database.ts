@@ -47,6 +47,23 @@ export type BudgetRow = {
   alert_threshold: number
 }
 
+export type BudgetStatusValue = 'ok' | 'warning' | 'exceeded'
+
+export type BudgetStatusRow = {
+  budget_id: string
+  user_id: string
+  category_id: string | null
+  category_name: string | null
+  category_icon: string | null
+  category_color: string | null
+  month: string
+  amount_limit: number
+  alert_threshold: number
+  spent_amount: number
+  remaining_amount: number
+  status: BudgetStatusValue
+}
+
 export type RecurringExpenseRow = {
   id: string
   user_id: string
@@ -74,6 +91,57 @@ export type ExpensesByCategoryMonthRow = {
   month: string | null
   total_amount: number | null
   expense_count: number | null
+}
+
+export type DashboardDailyStatRow = {
+  user_id: string
+  month: string
+  day: string
+  total_amount: number
+  expense_count: number
+}
+
+export type DashboardMonthlyStatRow = {
+  user_id: string
+  month: string
+  total_amount: number
+  expense_count: number
+}
+
+export type DashboardCategoryStatRow = {
+  user_id: string
+  month: string
+  category_id: string | null
+  category_name: string | null
+  category_icon: string | null
+  category_color: string | null
+  total_amount: number
+  expense_count: number
+}
+
+export type DashboardMerchantStatRow = {
+  user_id: string
+  month: string
+  merchant: string
+  total_amount: number
+  expense_count: number
+}
+
+export type DashboardRecentExpenseRow = {
+  id: string
+  user_id: string
+  category_id: string | null
+  category_name: string | null
+  category_icon: string | null
+  category_color: string | null
+  merchant: string
+  amount: number
+  expense_date: string
+  note: string | null
+  payment_method: PaymentMethod
+  created_at: string
+  month: string
+  month_rank: number
 }
 
 export type ProfileInsert = {
@@ -189,6 +257,30 @@ export type Database = {
         Row: ExpensesByCategoryMonthRow
         Relationships: []
       }
+      budget_status: {
+        Row: BudgetStatusRow
+        Relationships: []
+      }
+      dashboard_daily_stats: {
+        Row: DashboardDailyStatRow
+        Relationships: []
+      }
+      dashboard_monthly_stats: {
+        Row: DashboardMonthlyStatRow
+        Relationships: []
+      }
+      dashboard_category_stats: {
+        Row: DashboardCategoryStatRow
+        Relationships: []
+      }
+      dashboard_merchant_stats: {
+        Row: DashboardMerchantStatRow
+        Relationships: []
+      }
+      dashboard_recent_expenses: {
+        Row: DashboardRecentExpenseRow
+        Relationships: []
+      }
     }
     Functions: { [_ in never]: never }
     Enums: { [_ in never]: never }
@@ -197,5 +289,13 @@ export type Database = {
 }
 
 export type ExpenseWithCategory = ExpenseRow & {
+  category: Pick<CategoryRow, 'id' | 'name' | 'icon' | 'color'> | null
+}
+
+export type ExpenseTemplateWithCategory = ExpenseTemplateRow & {
+  category: Pick<CategoryRow, 'id' | 'name' | 'icon' | 'color'> | null
+}
+
+export type RecurringExpenseWithCategory = RecurringExpenseRow & {
   category: Pick<CategoryRow, 'id' | 'name' | 'icon' | 'color'> | null
 }

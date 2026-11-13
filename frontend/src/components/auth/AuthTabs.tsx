@@ -12,7 +12,7 @@ const tabs = [
 export function AuthTabs({ active }: AuthTabsProps) {
   return (
     <div
-      className="grid grid-cols-2 rounded-xl bg-slate-100 p-1 text-center text-xs font-semibold"
+      className="grid grid-cols-2 rounded-xl bg-slate-100 p-1 text-center text-xs font-semibold dark:bg-slate-800"
       role="tablist"
       aria-label="Mode d’authentification"
     >
@@ -27,8 +27,8 @@ export function AuthTabs({ active }: AuthTabsProps) {
             aria-selected={isActive}
             className={`rounded-lg py-2.5 transition-colors ${
               isActive
-                ? 'bg-white text-slate-900 shadow-sm'
-                : 'text-slate-500 hover:text-slate-900'
+                ? 'bg-white text-slate-900 shadow-sm dark:bg-slate-900 dark:text-white dark:shadow-none'
+                : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
             }`}
           >
             {tab.label}

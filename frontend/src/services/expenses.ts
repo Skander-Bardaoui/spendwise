@@ -1,5 +1,6 @@
 import type { PostgrestError } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
+import { deleteReceipt } from '@/services/receipts'
 import type {
   ExpenseInsert,
   ExpenseUpdate,
@@ -43,6 +44,7 @@ export type ExpenseInput = {
   category_id: string
   payment_method: PaymentMethod
   note: string | null
+  receipt_path?: string | null
 }
 
 function translateExpenseError(error: PostgrestError): Error {
@@ -123,6 +125,34 @@ export async function listExpenses(
   }
 }
 
+const EXPORT_BATCH_SIZE = 1000
+const EXPORT_MAX_PAGES = 200
+
+export async function listAllExpenses(
+  filters: ExpenseFilters,
+): Promise<ExpenseWithCategory[]> {
+  const rows: ExpenseWithCategory[] = []
+  let page = 1
+
+  while (page <= EXPORT_MAX_PAGES) {
+    const batch = await listExpenses({
+      ...filters,
+      page,
+      pageSize: EXPORT_BATCH_SIZE,
+    })
+
+    rows.push(...batch.rows)
+
+    if (batch.rows.length === 0 || rows.length >= batch.total) {
+      break
+    }
+
+    page += 1
+  }
+
+  return rows
+}
+
 export async function createExpense(
   input: ExpenseInput,
 ): Promise<ExpenseWithCategory> {
@@ -145,6 +175,7 @@ export async function createExpense(
     category_id: input.category_id,
     payment_method: input.payment_method,
     note: input.note?.trim() || null,
+    receipt_path: input.receipt_path ?? null,
   }
 
   const { data, error } = await supabase
@@ -160,6 +191,63 @@ export async function createExpense(
   return data as unknown as ExpenseWithCategory
 }
 
+export type BulkExpenseInput = {
+  merchant: string
+  amount: number
+  expense_date: string
+  category_id: string
+}
+
+const BULK_INSERT_CHUNK_SIZE = 500
+
+export async function createExpensesBulk(
+  inputs: BulkExpenseInput[],
+): Promise<number> {
+  if (inputs.length === 0) return 0
+
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser()
+
+  if (authError || !user) {
+    throw new Error(
+      'Vous devez être connecté pour importer des dépenses.',
+    )
+  }
+
+  let inserted = 0
+
+  for (let start = 0; start < inputs.length; start += BULK_INSERT_CHUNK_SIZE) {
+    const chunk = inputs.slice(start, start + BULK_INSERT_CHUNK_SIZE)
+    const payload: ExpenseInsert[] = chunk.map((input) => ({
+      user_id: user.id,
+      merchant: input.merchant.trim(),
+      amount: input.amount,
+      expense_date: input.expense_date,
+      category_id: input.category_id,
+      payment_method: 'other',
+      note: null,
+      receipt_path: null,
+    }))
+
+    const { error } = await supabase.from('expenses').insert(payload)
+
+    if (error) {
+      const translated = translateExpenseError(error)
+      throw new Error(
+        inserted > 0
+          ? `Import interrompu après ${inserted} dépense(s). ${translated.message}`
+          : translated.message,
+      )
+    }
+
+    inserted += chunk.length
+  }
+
+  return inserted
+}
+
 export async function updateExpense(
   id: string,
   input: ExpenseInput,
@@ -171,6 +259,7 @@ export async function updateExpense(
     category_id: input.category_id,
     payment_method: input.payment_method,
     note: input.note?.trim() || null,
+    receipt_path: input.receipt_path ?? null,
   }
 
   const { data, error } = await supabase
@@ -187,10 +276,22 @@ export async function updateExpense(
   return data as unknown as ExpenseWithCategory
 }
 
-export async function deleteExpense(id: string): Promise<void> {
+export async function deleteExpense(
+  id: string,
+  receiptPath?: string | null,
+): Promise<void> {
   const { error } = await supabase.from('expenses').delete().eq('id', id)
 
   if (error) {
     throw translateExpenseError(error)
+  }
+
+  if (receiptPath) {
+    try {
+      await deleteReceipt(receiptPath)
+    } catch {
+      // La dépense est déjà supprimée : un fichier orphelin ne doit pas
+      // faire échouer l'opération côté utilisateur.
+    }
   }
 }

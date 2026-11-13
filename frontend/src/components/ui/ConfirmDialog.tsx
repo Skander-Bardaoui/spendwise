@@ -24,14 +24,14 @@ export function ConfirmDialog({
     <Modal open={open} onClose={onCancel} maxWidthClassName="max-w-md">
       <div className="p-6">
         <div className="flex items-start gap-4">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500 dark:bg-red-500/10 dark:text-red-400">
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
           </span>
           <div>
-            <h2 className="text-lg font-semibold tracking-tight text-slate-900">
+            <h2 className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
               {title}
             </h2>
-            <p className="mt-1 text-sm leading-relaxed text-slate-500">
+            <p className="mt-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
               {description}
             </p>
           </div>
@@ -42,7 +42,7 @@ export function ConfirmDialog({
             type="button"
             onClick={onCancel}
             disabled={pending}
-            className="h-10 rounded-xl bg-slate-100 px-4 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200 disabled:opacity-60"
+            className="h-10 rounded-xl bg-slate-100 px-4 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200 disabled:opacity-60 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
           >
             Annuler
           </button>

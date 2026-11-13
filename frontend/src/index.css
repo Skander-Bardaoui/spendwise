@@ -1,12 +1,46 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --sw-body-bg: #f8fafc;
+  --sw-body-text: #0f172a;
+  --sw-chart-grid: #e2e8f0;
+  --sw-chart-axis: #94a3b8;
+  --sw-chart-cursor: rgba(15, 23, 42, 0.06);
+  --sw-chart-primary: #10b981;
+  --sw-bar-muted: #a7f3d0;
+  --sw-tooltip-bg: #ffffff;
+  --sw-tooltip-border: #e2e8f0;
+  --sw-tooltip-text: #0f172a;
+  --sw-tooltip-muted: #64748b;
+}
+
+.dark {
+  color-scheme: dark;
+  --sw-body-bg: #020617;
+  --sw-body-text: #f1f5f9;
+  --sw-chart-grid: #1e293b;
+  --sw-chart-axis: #64748b;
+  --sw-chart-cursor: rgba(148, 163, 184, 0.14);
+  --sw-chart-primary: #34d399;
+  --sw-bar-muted: #065f46;
+  --sw-tooltip-bg: #0f172a;
+  --sw-tooltip-border: #334155;
+  --sw-tooltip-text: #f1f5f9;
+  --sw-tooltip-muted: #94a3b8;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--sw-body-bg);
+  color: var(--sw-body-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

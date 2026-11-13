@@ -37,7 +37,7 @@ export function Modal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-slate-950/40 p-3 backdrop-blur-sm sm:items-center sm:p-6"
+      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-slate-950/40 p-3 backdrop-blur-sm dark:bg-black/70 sm:items-center sm:p-6"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) onClose()
       }}
@@ -46,7 +46,7 @@ export function Modal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={labelledBy}
-        className={`relative my-auto w-full overflow-hidden rounded-2xl bg-white shadow-2xl ${maxWidthClassName}`}
+        className={`relative my-auto w-full overflow-hidden rounded-2xl bg-white shadow-2xl dark:bg-slate-900 dark:shadow-none dark:ring-1 dark:ring-slate-800 ${maxWidthClassName}`}
       >
         <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-500 via-emerald-300 to-emerald-500" />
         {children}

@@ -6,6 +6,8 @@ import {
 } from '@tanstack/react-query'
 import type { QueryClient, QueryKey } from '@tanstack/react-query'
 import { categoryKeys } from '@/hooks/useCategories'
+import { budgetKeys } from '@/hooks/useBudgets'
+import { dashboardKeys } from '@/hooks/useDashboard'
 import {
   createExpense,
   deleteExpense,
@@ -32,6 +34,11 @@ type ListSnapshot = Array<[QueryKey, ExpensePage | undefined]>
 type UpdateExpenseVariables = {
   id: string
   input: ExpenseInput
+}
+
+type DeleteExpenseVariables = {
+  id: string
+  receiptPath?: string | null
 }
 
 function getFiltersFromKey(key: QueryKey): ExpenseFilters | null {
@@ -148,7 +155,7 @@ export function useCreateExpense() {
         amount: input.amount,
         expense_date: input.expense_date,
         note: input.note,
-        receipt_path: null,
+        receipt_path: input.receipt_path ?? null,
         payment_method: input.payment_method,
         recurring_id: null,
         created_at: new Date().toISOString(),
@@ -180,6 +187,8 @@ export function useCreateExpense() {
     },
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: expenseKeys.all })
+      void queryClient.invalidateQueries({ queryKey: budgetKeys.all })
+      void queryClient.invalidateQueries({ queryKey: dashboardKeys.all })
     },
   })
 }
@@ -214,6 +223,7 @@ export function useUpdateExpense() {
                 category: pickCategory(category),
                 payment_method: input.payment_method,
                 note: input.note,
+                receipt_path: input.receipt_path ?? null,
               }
             : row,
         )
@@ -231,6 +241,8 @@ export function useUpdateExpense() {
     },
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: expenseKeys.all })
+      void queryClient.invalidateQueries({ queryKey: budgetKeys.all })
+      void queryClient.invalidateQueries({ queryKey: dashboardKeys.all })
     },
   })
 }
@@ -239,8 +251,9 @@ export function useDeleteExpense() {
   const queryClient = useQueryClient()
 
   return useMutation({
-    mutationFn: (id: string) => deleteExpense(id),
-    onMutate: async (id) => {
+    mutationFn: ({ id, receiptPath }: DeleteExpenseVariables) =>
+      deleteExpense(id, receiptPath),
+    onMutate: async ({ id }) => {
       await queryClient.cancelQueries({ queryKey: expenseKeys.lists() })
       const snapshots = snapshotLists(queryClient)
 
@@ -254,11 +267,13 @@ export function useDeleteExpense() {
 
       return { snapshots }
     },
-    onError: (_error, _id, context) => {
+    onError: (_error, _variables, context) => {
       rollbackLists(queryClient, context?.snapshots)
     },
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: expenseKeys.all })
+      void queryClient.invalidateQueries({ queryKey: budgetKeys.all })
+      void queryClient.invalidateQueries({ queryKey: dashboardKeys.all })
     },
   })
 }

@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear()
 
 export function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white lg:flex-row">
+    <div className="flex min-h-screen w-full flex-col bg-white dark:bg-slate-950 lg:flex-row">
       <aside className="relative hidden w-[52%] flex-col gap-8 overflow-hidden bg-gradient-to-br from-slate-950 via-[#06241a] to-slate-900 p-12 text-white lg:flex xl:w-[54%] xl:p-16">
         <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-emerald-500/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-24 top-1/2 h-[420px] w-[420px] rounded-full bg-emerald-600/15 blur-[110px]" />
@@ -111,7 +111,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
 
           <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.05] p-3.5 shadow-lg shadow-black/20 backdrop-blur-xl">
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-xs font-bold text-slate-900 shadow">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-xs font-bold text-slate-900 shadow dark:bg-slate-800 dark:text-slate-100">
                 M
               </div>
               <div>
@@ -190,19 +190,19 @@ export function AuthLayout({ children }: AuthLayoutProps) {
         </div>
       </aside>
 
-      <section className="flex min-h-screen w-full flex-col justify-between bg-white p-6 sm:p-10 lg:w-[48%] lg:p-12 xl:w-[46%] xl:p-16">
+      <section className="flex min-h-screen w-full flex-col justify-between bg-white p-6 dark:bg-slate-900 sm:p-10 lg:w-[48%] lg:p-12 xl:w-[46%] xl:p-16">
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-2 lg:hidden">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500 text-white shadow-md">
               <Wallet className="h-5 w-5" aria-hidden="true" />
             </div>
-            <span className="text-lg font-bold tracking-tight text-slate-900">
+            <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">
               SpendWise
             </span>
           </div>
-          <div className="ml-auto flex items-center gap-2 text-xs font-medium text-slate-500">
+          <div className="ml-auto flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
             <LockKeyhole
-              className="h-4 w-4 text-emerald-600"
+              className="h-4 w-4 text-emerald-600 dark:text-emerald-400"
               aria-hidden="true"
             />
             <span>Connexion sécurisée</span>
@@ -213,7 +213,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
           {children}
         </div>
 
-        <footer className="mt-8 flex flex-col gap-2 border-t border-slate-100 pt-6 text-[11px] text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <footer className="mt-8 flex flex-col gap-2 border-t border-slate-100 pt-6 text-[11px] text-slate-400 dark:border-slate-800 dark:text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <span>© {currentYear} SpendWise. Tous droits réservés.</span>
           <span>Données chiffrées · Conforme RGPD</span>
         </footer>

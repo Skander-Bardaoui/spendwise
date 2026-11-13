@@ -31,6 +31,48 @@ export function formatCurrency(amount: number) {
   return `${amountFormatter.format(amount)} TND`
 }
 
+const compactNumberFormatter = new Intl.NumberFormat('fr-FR', {
+  maximumFractionDigits: 1,
+})
+
+export function formatCompactCurrency(amount: number) {
+  const absolute = Math.abs(amount)
+  if (absolute >= 1_000_000) {
+    return `${compactNumberFormatter.format(amount / 1_000_000)} M`
+  }
+  if (absolute >= 1_000) {
+    return `${compactNumberFormatter.format(amount / 1_000)} k`
+  }
+  return new Intl.NumberFormat('fr-FR', {
+    maximumFractionDigits: 0,
+  }).format(amount)
+}
+
+export function getCurrentMonthISO() {
+  const now = new Date()
+  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-01`
+}
+
+export function shiftMonthISO(month: string, offset: number) {
+  const [year, monthNumber] = month.split('-').map(Number)
+  const date = new Date(year, monthNumber - 1 + offset, 1)
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-01`
+}
+
+export function formatMonthLabel(month: string) {
+  const label = format(parseISO(`${month.slice(0, 10)}T00:00:00`), 'MMMM yyyy', {
+    locale: fr,
+  })
+  return label.charAt(0).toUpperCase() + label.slice(1)
+}
+
+export function formatMonthShort(month: string) {
+  const label = format(parseISO(`${month.slice(0, 10)}T00:00:00`), 'MMM', {
+    locale: fr,
+  })
+  return (label.charAt(0).toUpperCase() + label.slice(1)).replace('.', '')
+}
+
 export function formatExpenseDate(isoDate: string) {
   const label = format(parseISO(`${isoDate}T00:00:00`), 'd MMM yyyy', {
     locale: fr,

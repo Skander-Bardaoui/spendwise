@@ -40,9 +40,9 @@ const SORT_OPTIONS: Array<{ value: ExpenseSortField; label: string }> = [
 ]
 
 const fieldClass =
-  'h-9 w-full rounded-lg bg-slate-50 px-3 text-xs font-medium text-slate-700 outline-none ring-1 ring-slate-200 transition-shadow focus:ring-2 focus:ring-emerald-400'
+  'h-9 w-full rounded-lg bg-slate-50 px-3 text-xs font-medium text-slate-700 outline-none ring-1 ring-slate-200 transition-shadow focus:ring-2 focus:ring-emerald-400 dark:bg-slate-800/60 dark:text-slate-300 dark:ring-slate-700'
 const labelClass =
-  'mb-1 block text-[10px] font-semibold uppercase tracking-wider text-slate-500'
+  'mb-1 block text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400'
 
 function parseNumberInput(value: string) {
   if (value.trim() === '') return null
@@ -58,11 +58,11 @@ export function ExpenseFilters({
   onSortDirectionToggle,
 }: ExpenseFiltersProps) {
   return (
-    <section className="rounded-2xl bg-white p-4 shadow-sm sm:p-5">
+    <section className="rounded-2xl bg-white p-4 shadow-sm dark:bg-slate-900 sm:p-5">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
         <div className="relative flex-1">
           <Search
-            className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+            className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 dark:text-slate-500"
             aria-hidden="true"
           />
           <input
@@ -71,14 +71,14 @@ export function ExpenseFilters({
             onChange={(event) => onChange({ search: event.target.value })}
             placeholder="Rechercher un commerçant, un mot-clé ou une note..."
             aria-label="Rechercher une dépense"
-            className="h-11 w-full rounded-xl bg-slate-50 pl-10 pr-10 text-sm text-slate-900 outline-none ring-1 ring-slate-200 transition-shadow placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-emerald-400"
+            className="h-11 w-full rounded-xl bg-slate-50 pl-10 pr-10 text-sm text-slate-900 outline-none ring-1 ring-slate-200 transition-shadow placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-emerald-400 dark:bg-slate-800/60 dark:text-slate-100 dark:ring-slate-700 dark:placeholder:text-slate-500 dark:focus:bg-slate-800"
           />
           {filters.search && (
             <button
               type="button"
               onClick={() => onChange({ search: '' })}
               aria-label="Effacer la recherche"
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-1 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-1 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:text-slate-500 dark:hover:bg-slate-800 dark:hover:text-slate-200"
             >
               <X className="h-4 w-4" aria-hidden="true" />
             </button>
@@ -88,7 +88,7 @@ export function ExpenseFilters({
         <button
           type="button"
           onClick={onReset}
-          className="inline-flex h-9 items-center justify-center gap-1.5 self-end rounded-lg px-3 text-xs font-semibold text-slate-500 transition-colors hover:bg-red-50 hover:text-red-600 lg:self-auto"
+          className="inline-flex h-9 items-center justify-center gap-1.5 self-end rounded-lg px-3 text-xs font-semibold text-slate-500 transition-colors hover:bg-red-50 hover:text-red-600 dark:text-slate-400 dark:hover:bg-red-500/10 dark:hover:text-red-400 lg:self-auto"
         >
           <RotateCcw className="h-4 w-4" aria-hidden="true" />
           Réinitialiser
@@ -108,8 +108,8 @@ export function ExpenseFilters({
               }
               className={`h-8 shrink-0 rounded-full px-3 text-xs font-semibold transition-colors ${
                 isActive
-                  ? 'bg-emerald-500/15 text-emerald-800'
-                  : 'bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-800'
+                  ? 'bg-emerald-500/15 text-emerald-800 dark:text-emerald-300'
+                  : 'bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-200'
               }`}
             >
               {preset.label}
@@ -140,7 +140,7 @@ export function ExpenseFilters({
               ))}
             </select>
             <ChevronDown
-              className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400 dark:text-slate-500"
               aria-hidden="true"
             />
           </div>
@@ -169,7 +169,7 @@ export function ExpenseFilters({
               ))}
             </select>
             <ChevronDown
-              className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400 dark:text-slate-500"
               aria-hidden="true"
             />
           </div>
@@ -246,11 +246,11 @@ export function ExpenseFilters({
         </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3 dark:border-slate-800">
         <div className="flex items-center gap-2">
           <label
             htmlFor="filter-sort"
-            className="text-[11px] font-medium text-slate-500"
+            className="text-[11px] font-medium text-slate-500 dark:text-slate-400"
           >
             Trier par
           </label>
@@ -272,7 +272,7 @@ export function ExpenseFilters({
               ))}
             </select>
             <ChevronDown
-              className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400 dark:text-slate-500"
               aria-hidden="true"
             />
           </div>
@@ -289,7 +289,7 @@ export function ExpenseFilters({
                 ? 'Ordre décroissant'
                 : 'Ordre croissant'
             }
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-slate-800"
+            className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500 ring-1 ring-slate-200 transition-colors hover:bg-slate-100 hover:text-slate-800 dark:bg-slate-800 dark:text-slate-400 dark:ring-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-200"
           >
             {filters.sortDirection === 'asc' ? (
               <ArrowUp className="h-4 w-4" aria-hidden="true" />
@@ -298,7 +298,7 @@ export function ExpenseFilters({
             )}
           </button>
         </div>
-        <span className="text-[11px] text-slate-400">
+        <span className="text-[11px] text-slate-400 dark:text-slate-500">
           {filters.dateFrom || filters.dateTo
             ? 'Période personnalisée possible via les champs Du / Au'
             : 'Toutes les dépenses'}

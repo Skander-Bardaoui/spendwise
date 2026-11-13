@@ -26,7 +26,7 @@ export const AuthField = forwardRef<HTMLInputElement, AuthFieldProps>(
         <div className="flex items-center justify-between gap-3">
           <label
             htmlFor={inputId}
-            className="text-xs font-semibold text-slate-700"
+            className="text-xs font-semibold text-slate-700 dark:text-slate-300"
           >
             {label}
           </label>
@@ -35,7 +35,7 @@ export const AuthField = forwardRef<HTMLInputElement, AuthFieldProps>(
 
         <div className="relative flex items-center">
           <Icon
-            className="pointer-events-none absolute left-3.5 h-[18px] w-[18px] text-slate-400"
+            className="pointer-events-none absolute left-3.5 h-[18px] w-[18px] text-slate-400 dark:text-slate-500"
             aria-hidden="true"
           />
           <input
@@ -45,10 +45,12 @@ export const AuthField = forwardRef<HTMLInputElement, AuthFieldProps>(
             aria-invalid={error ? true : undefined}
             aria-describedby={error ? `${inputId}-error` : undefined}
             className={[
-              'h-11 w-full rounded-xl border bg-white pl-10 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400',
+              'h-11 w-full rounded-xl border bg-white pl-10 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 dark:bg-slate-800/60 dark:text-slate-100 dark:placeholder:text-slate-500',
               isPassword ? 'pr-11' : 'pr-3.5',
               'focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20',
-              error ? 'border-red-300' : 'border-slate-200',
+              error
+                ? 'border-red-300 dark:border-red-500/50'
+                : 'border-slate-200 dark:border-slate-700',
               className ?? '',
             ].join(' ')}
             {...props}
@@ -62,7 +64,7 @@ export const AuthField = forwardRef<HTMLInputElement, AuthFieldProps>(
                   ? 'Masquer le mot de passe'
                   : 'Afficher le mot de passe'
               }
-              className="absolute right-3 p-1 text-slate-400 transition-colors hover:text-slate-600"
+              className="absolute right-3 p-1 text-slate-400 transition-colors hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
             >
               {revealed ? (
                 <EyeOff className="h-[18px] w-[18px]" aria-hidden="true" />
@@ -76,7 +78,7 @@ export const AuthField = forwardRef<HTMLInputElement, AuthFieldProps>(
         {error && (
           <p
             id={`${inputId}-error`}
-            className="text-xs font-medium text-red-600"
+            className="text-xs font-medium text-red-600 dark:text-red-400"
           >
             {error}
           </p>
