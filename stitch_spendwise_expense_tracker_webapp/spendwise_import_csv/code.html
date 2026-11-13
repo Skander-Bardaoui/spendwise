@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#bbcabf","surface-container-low":"#eff4ff","on-tertiary-container":"#00367a","inverse-primary":"#4edea3","on-surface-variant":"#3c4a42","on-tertiary-fixed":"#001a42","on-surface":"#0b1c30","on-primary":"#ffffff","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-container":"#00422b","surface-tint":"#006c49","surface-bright":"#f8f9ff","background":"#f8f9ff","primary-container":"#10b981","surface-container-high":"#dce9ff","on-secondary-fixed":"#131b2e","surface":"#f8f9ff","on-primary-fixed":"#002113","error":"#ba1a1a","error-container":"#ffdad6","secondary":"#565e74","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-error-container":"#93000a","primary-fixed":"#6ffbbe","primary":"#006c49","outline":"#6c7a71","tertiary-fixed":"#d8e2ff","on-primary-fixed-variant":"#005236","secondary-fixed":"#dae2fd","on-error":"#ffffff","tertiary-fixed-dim":"#adc6ff","primary-fixed-dim":"#4edea3","tertiary":"#005ac2","tertiary-container":"#71a1ff","secondary-fixed-dim":"#bec6e0","on-tertiary":"#ffffff","surface-dim":"#cbdbf5","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004395","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","inverse-on-surface":"#eaf1ff","secondary-container":"#dae2fd"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem",gutter:"1.5rem","space-sm":"0.75rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-xs":"0.5rem","space-xl":"2rem","space-2xs":"0.25rem",margin:"2rem","space-lg":"1.5rem","space-2xl":"3rem"},fontFamily:{"headline-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"numeric-lg":["Inter"],"title-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"]},fontSize:{"headline-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"600"}],"numeric-lg":["2rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"title-md":["1.125rem",{lineHeight:"1.625rem",letterSpacing:"-0.005em",fontWeight:"500"}],"label-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"display-lg":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="hidden lg:flex fixed left-0 top-0 bottom-0 w-72 bg-surface-container-lowest flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="SpendWise Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">SpendWise</span></div><nav class="px-space-md py-space-sm space-y-1 flex-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Dépenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="recurrentes" href="#"><span class="material-symbols-outlined text-[20px]">sync</span><span>Récurrentes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[20px]">pie_chart</span><span>Budgets</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Catégories</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="profil-&amp;-parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Profil &amp; Paramètres</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-2xl flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sophie Laurent</span><span class="font-label-sm text-label-sm text-primary font-medium tracking-tight">Premium</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">PRO</span></div><div class="flex items-center justify-between pt-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">dark_mode</span>Mode sombre</span><button aria-label="Basculer le mode sombre" class="w-9 h-5 bg-surface-container-high rounded-full relative p-0.5 transition-colors focus:outline-none" type="button"><span class="block w-4 h-4 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform"></span></button></div></div></aside><div class="lg:pl-72"><header class="fixed top-0 left-0 lg:left-72 right-0 h-16 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm lg:hidden"><img alt="SpendWise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">SpendWise</span></div><div class="hidden md:flex items-center flex-1 max-w-md"><button class="w-full flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:bg-surface-container-low transition-colors" type="button"><span class="flex items-center gap-space-xs font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px]">search</span>Rechercher une transaction...</span><kbd class="font-label-sm text-[11px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">⌘K</kbd></button></div><div class="flex items-center gap-space-sm ml-auto"><button aria-label="Notifications" class="relative p-space-xs rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-[0_1px_3px_rgba(15,23,42,0.05)] focus:ring-2 focus:ring-primary-container" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nouvelle dépense</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover lg:hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/></div></header><main class="relative w-full pt-16 pb-24 lg:pb-space-2xl px-space-md lg:px-space-xl bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full flex flex-col gap-space-xl">
+<!-- Header Page Contextuel -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-primary">cloud_upload</span>
+<span>Opérations • Importation guidée</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Importation de relevés bancaires</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Importez vos opérations au format CSV ou relevé bancaire en quelques clics.</p>
+</div>
+<!-- Quick Action / Help Badge -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full self-start md:self-auto shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Assistant intelligent IA actif</span>
+<span class="material-symbols-outlined text-[18px] text-primary">auto_fix_high</span>
+</div>
+</div>
+<!-- Stepper Visuel 3 Étapes -->
+<div class="w-full bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md relative">
+<!-- Step 1: Complétée -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-container-low transition-all">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Étape 1</span>
+<span class="font-label-sm text-[11px] bg-primary/10 text-primary px-1.5 py-0.2 rounded font-medium">Terminé</span>
+</div>
+<span class="font-title-md text-title-md font-semibold text-on-surface truncate">Téléversement du fichier</span>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[15px] text-primary">description</span>
+<span class="truncate">releve_mars2025.csv (48 Ko)</span>
+</div>
+</div>
+</div>
+<!-- Step 2: En cours (Active) -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-primary/10 shadow-sm transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/15 rounded-full blur-xl pointer-events-none"></div>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-md font-numeric-lg text-[16px] font-semibold">
+            2
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Étape 2</span>
+<span class="font-label-sm text-[11px] bg-primary text-on-primary px-1.5 py-0.2 rounded-full font-medium">En cours</span>
+</div>
+<span class="font-title-md text-title-md font-semibold text-on-surface truncate">Correspondance des colonnes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mapping automatique vérifié</span>
+</div>
+</div>
+<!-- Step 3: À venir -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface opacity-70">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0 font-numeric-lg text-[16px] font-semibold">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Étape 3</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface truncate">Validation &amp; Rapport</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Intégration au grand livre</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rapport de Statut Immédiat (Alert/Status Banner) -->
+<div class="bg-surface-container-lowest p-space-md md:p-space-lg rounded-2xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">analytics</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">42 opérations détectées</span>
+<span class="px-space-xs py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 41 prêtes
+            </span>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> 1 avertissement
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">L'analyse syntaxique s'est achevée avec succès. Une ligne nécessite votre attention avant injection finale.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl w-full md:w-auto justify-between md:justify-start">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume total calculé</span>
+<span class="font-numeric-lg text-title-md font-semibold text-on-surface">3 482,90 €</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">account_balance_wallet</span>
+</div>
+</div>
+<!-- Zone Centrale Bento Grid : Configuration de Mapping (Gauche) & Conseils (Droite) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Bloc Configuration Mapping (8 Colonnes) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-lg md:p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Configuration des correspondances</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Associez les colonnes de votre fichier CSV aux attributs SpendWise</p>
+</div>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span> Réinitialiser
+          </button>
+</div>
+<!-- Formulaire de Mappings -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Colonne Date -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-low p-space-md rounded-xl transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span>Date de l'opération *</span>
+</label>
+<span class="font-label-sm text-[11px] bg-primary/10 text-primary font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Auto 98%
+              </span>
+</div>
+<div class="relative mt-1">
+<select class="w-full h-11 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl px-space-md pr-10 appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Date opération (Colonne A)</option>
+<option>Date valeur (Colonne B)</option>
+<option>Horodatage brut (Colonne G)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Format détecté : <strong class="text-on-surface font-medium">JJ/MM/AAAA</strong></span>
+<span class="text-primary font-medium cursor-pointer hover:underline">Modifier le format</span>
+</div>
+</div>
+<!-- Colonne Commerçant / Libellé -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-low p-space-md rounded-xl transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">storefront</span>
+<span>Commerçant / Libellé *</span>
+</label>
+<span class="font-label-sm text-[11px] bg-primary/10 text-primary font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Auto 100%
+              </span>
+</div>
+<div class="relative mt-1">
+<select class="w-full h-11 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl px-space-md pr-10 appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Libellé simplifié (Colonne C)</option>
+<option>Détail bancaire long (Colonne D)</option>
+<option>Identifiant virement (Colonne F)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Nettoyage préfixe automatique : <strong class="text-primary font-medium">Activé</strong></span>
+</div>
+</div>
+<!-- Colonne Montant -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-low p-space-md rounded-xl transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">euro</span>
+<span>Montant net *</span>
+</label>
+<span class="font-label-sm text-[11px] bg-primary/10 text-primary font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Auto 96%
+              </span>
+</div>
+<div class="relative mt-1">
+<select class="w-full h-11 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl px-space-md pr-10 appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Débit / Crédit signé (Colonne E)</option>
+<option>Montant absolu (Colonne H)</option>
+<option>Solde courant (Colonne I)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Séparateur décimal : <strong class="text-on-surface font-medium">Virgule (,)</strong></span>
+<span class="text-on-surface font-medium">Devise EUR (€)</span>
+</div>
+</div>
+<!-- Colonne Catégorie (Optionnelle) -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-low p-space-md rounded-xl transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">category</span>
+<span>Catégorie (Optionnelle)</span>
+</label>
+<span class="font-label-sm text-[11px] bg-tertiary-container/30 text-on-tertiary-container font-semibold px-2 py-0.5 rounded-full">
+                Prédit par SpendWise
+              </span>
+</div>
+<div class="relative mt-1">
+<select class="w-full h-11 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl px-space-md pr-10 appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Catégorie détectée IA (Recommandé)</option>
+<option>Type d'opération brute (Colonne F)</option>
+<option>Ne pas catégoriser à l'import</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Taxonomie SpendWise 2025 standard</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bloc Résumé des Règles & Fichier Source (4 Colonnes) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Carte Détails Fichier -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Fichier source connecté</span>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-xl">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center font-bold">
+              CSV
+            </div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">releve_bancaire_mars2025.csv</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">48 Ko • Encodage UTF-8</span>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Séparateur de champs :</span>
+<span class="font-medium text-on-surface font-mono bg-surface-container px-2 rounded">Point-virgule (;)</span>
+</div>
+<div class="flex justify-between">
+<span>Ligne d'en-tête :</span>
+<span class="font-medium text-on-surface font-mono bg-surface-container px-2 rounded">Ligne 1 ignorée</span>
+</div>
+<div class="flex justify-between">
+<span>Compte cible :</span>
+<span class="font-medium text-on-surface">Compte Courant • BNP</span>
+</div>
+</div>
+</div>
+<!-- Carte Automatisation et Détection IA -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm flex-1 justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Détection intelligente</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">SpendWise a reconnu la structure type de votre banque. Les doublons éventuels seront automatiquement ignorés.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Chiffrement AES-256 de bout en bout appliqué</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tableau de Prévisualisation des Données (Preview Table) -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<!-- En-tête Tableau avec Filtres rapides -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">table_view</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Prévisualisation des 6 premières opérations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vérifiez la concordance des colonnes avant validation</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Afficher :</span>
+<button class="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Toutes (42)</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium transition-colors">Valides (41)</button>
+<button class="px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Erreur (1)
+          </button>
+</div>
+</div>
+<!-- Container scrollable de table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md w-12 text-center" scope="col">#</th>
+<th class="py-space-sm px-space-md" scope="col">
+<div class="flex items-center gap-1.5">
+<span>Date</span>
+<span class="w-4 h-4 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-[10px]">✓</span>
+</div>
+</th>
+<th class="py-space-sm px-space-md" scope="col">
+<div class="flex items-center gap-1.5">
+<span>Libellé / Tiers</span>
+<span class="w-4 h-4 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-[10px]">✓</span>
+</div>
+</th>
+<th class="py-space-sm px-space-md" scope="col">
+<div class="flex items-center gap-1.5">
+<span>Catégorie assignée</span>
+<span class="w-4 h-4 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-[10px]">✓</span>
+</div>
+</th>
+<th class="py-space-sm px-space-md text-right" scope="col">
+<div class="flex items-center justify-end gap-1.5">
+<span>Montant</span>
+<span class="w-4 h-4 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-[10px]">✓</span>
+</div>
+</th>
+<th class="py-space-sm px-space-md text-center" scope="col">État</th>
+</tr>
+</thead>
+<tbody class="divide-none">
+<!-- Ligne 1: Valide -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md text-center text-on-surface-variant font-mono text-[12px]">01</td>
+<td class="py-space-md px-space-md text-on-surface font-medium">18/03/2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface text-[14px]">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Monoprix Madeleine</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+                  Alimentation • Courses
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right font-numeric-lg text-title-md font-semibold text-error">
+                - 43,20 €
+              </td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">check_circle</span> Conforme
+                </span>
+</td>
+</tr>
+<!-- Ligne 2: Valide -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/20">
+<td class="py-space-md px-space-md text-center text-on-surface-variant font-mono text-[12px]">02</td>
+<td class="py-space-md px-space-md text-on-surface font-medium">17/03/2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface text-[14px]">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">EDF Prélèvement Mensuel</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+                  Logement &amp; Énergie
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right font-numeric-lg text-title-md font-semibold text-error">
+                - 89,50 €
+              </td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">check_circle</span> Conforme
+                </span>
+</td>
+</tr>
+<!-- Ligne 3: Valide (Crédit positif) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md text-center text-on-surface-variant font-mono text-[12px]">03</td>
+<td class="py-space-md px-space-md text-on-surface font-medium">15/03/2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Virement Salaire ACME SAS</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+                  Revenus professionnels
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right font-numeric-lg text-title-md font-semibold text-primary">
+                + 2 850,00 €
+              </td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">check_circle</span> Conforme
+                </span>
+</td>
+</tr>
+<!-- Ligne 4: AVERTISSEMENT / ERREUR SURBRILLANCE -->
+<tr class="bg-error-container/40 transition-colors">
+<td class="py-space-md px-space-md text-center text-on-error-container font-mono text-[12px] font-bold">04</td>
+<td class="py-space-md px-space-md text-on-surface font-medium">14/03/2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-error-container text-on-error-container flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[16px]">report_problem</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-error-container">SNCF Voyageurs Connect</span>
+<span class="font-label-sm text-[11px] text-error font-medium">Montant manquant ou format invalide à la ligne 4</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">
+                  Transport
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1 text-error font-mono font-semibold bg-surface-container-lowest px-2 py-0.5 rounded">
+<span>ERR_NUM</span>
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="px-space-xs py-0.5 rounded-lg bg-surface-container-lowest text-error font-label-sm text-label-sm font-semibold shadow-sm hover:bg-error hover:text-on-error transition-colors flex items-center gap-1 mx-auto">
+<span class="material-symbols-outlined text-[14px]">edit</span> Corriger (49 €)
+                </button>
+</td>
+</tr>
+<!-- Ligne 5: Valide -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md text-center text-on-surface-variant font-mono text-[12px]">05</td>
+<td class="py-space-md px-space-md text-on-surface font-medium">12/03/2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface text-[14px]">
+<span class="material-symbols-outlined text-[16px]">local_cafe</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Café des Arts Paris</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+                  Restaurants &amp; Sorties
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right font-numeric-lg text-title-md font-semibold text-error">
+                - 6,40 €
+              </td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">check_circle</span> Conforme
+                </span>
+</td>
+</tr>
+<!-- Ligne 6: Valide -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/20">
+<td class="py-space-md px-space-md text-center text-on-surface-variant font-mono text-[12px]">06</td>
+<td class="py-space-md px-space-md text-on-surface font-medium">10/03/2025</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface text-[14px]">
+<span class="material-symbols-outlined text-[16px]">fitness_center</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Abonnement Salle Fitness</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+                  Santé &amp; Bien-être
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right font-numeric-lg text-title-md font-semibold text-error">
+                - 39,99 €
+              </td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">check_circle</span> Conforme
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pied du tableau / pagination indicatrice -->
+<div class="p-space-md bg-surface-container-low/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Affichage de 6 sur 42 lignes totales</span>
+</span>
+<button class="text-primary font-semibold hover:underline flex items-center gap-1">
+<span>Ouvrir l'inspecteur complet</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Barre d'Action & Navigation Inférieure -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<!-- Annuler -->
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-error hover:bg-error-container/30 transition-all font-semibold flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span>Annuler l'import</span>
+</button>
+<!-- Groupe Navigation Précédent / Valider -->
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<!-- Précédent -->
+<button class="flex-1 sm:flex-initial px-space-lg py-space-sm rounded-xl bg-surface-container font-label-md text-label-md text-on-surface font-semibold hover:bg-surface-container-high transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Précédent</span>
+</button>
+<!-- Valider & Importer Principal (Émeraude) -->
+<button class="flex-1 sm:flex-initial px-space-xl py-space-sm rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-md shadow-primary-container/20 flex items-center justify-center gap-space-xs active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]">file_download_done</span>
+<span>Valider et importer 41 opérations</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div><nav class="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50 px-space-sm flex items-center justify-around" data-active-classes="text-primary font-semibold"><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-[10px] mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[10px] mt-0.5">Dépenses</span></a><div class="flex items-center justify-center px-space-xs"><button aria-label="Ajouter une dépense" class="-mt-5 w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg shadow-primary-container/30 hover:bg-primary hover:text-on-primary transition-transform active:scale-95" type="button"><span class="material-symbols-outlined text-[26px]">add</span></button></div><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-sm text-[10px] mt-0.5">Budgets</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil-&amp;-parametres" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-[10px] mt-0.5">Profil</span></a></nav><div class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center" id="modal-root"></div><div class="fixed bottom-20 lg:bottom-6 right-4 z-50 flex flex-col gap-2 pointer-events-none" id="toast-root"></div></body></html>

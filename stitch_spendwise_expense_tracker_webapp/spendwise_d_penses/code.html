@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#bbcabf","surface-container-low":"#eff4ff","on-tertiary-container":"#00367a","inverse-primary":"#4edea3","on-surface-variant":"#3c4a42","on-tertiary-fixed":"#001a42","on-surface":"#0b1c30","on-primary":"#ffffff","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-container":"#00422b","surface-tint":"#006c49","surface-bright":"#f8f9ff","background":"#f8f9ff","primary-container":"#10b981","surface-container-high":"#dce9ff","on-secondary-fixed":"#131b2e","surface":"#f8f9ff","on-primary-fixed":"#002113","error":"#ba1a1a","error-container":"#ffdad6","secondary":"#565e74","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-error-container":"#93000a","primary-fixed":"#6ffbbe","primary":"#006c49","outline":"#6c7a71","tertiary-fixed":"#d8e2ff","on-primary-fixed-variant":"#005236","secondary-fixed":"#dae2fd","on-error":"#ffffff","tertiary-fixed-dim":"#adc6ff","primary-fixed-dim":"#4edea3","tertiary":"#005ac2","tertiary-container":"#71a1ff","secondary-fixed-dim":"#bec6e0","on-tertiary":"#ffffff","surface-dim":"#cbdbf5","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004395","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","inverse-on-surface":"#eaf1ff","secondary-container":"#dae2fd"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem",gutter:"1.5rem","space-sm":"0.75rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-xs":"0.5rem","space-xl":"2rem","space-2xs":"0.25rem",margin:"2rem","space-lg":"1.5rem","space-2xl":"3rem"},fontFamily:{"headline-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"numeric-lg":["Inter"],"title-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"]},fontSize:{"headline-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"600"}],"numeric-lg":["2rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"title-md":["1.125rem",{lineHeight:"1.625rem",letterSpacing:"-0.005em",fontWeight:"500"}],"label-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"display-lg":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="hidden lg:flex fixed left-0 top-0 bottom-0 w-72 bg-surface-container-lowest flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="SpendWise Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">SpendWise</span></div><nav class="px-space-md py-space-sm space-y-1 flex-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Dépenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="recurrentes" href="#"><span class="material-symbols-outlined text-[20px]">sync</span><span>Récurrentes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[20px]">pie_chart</span><span>Budgets</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Catégories</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="profil-&-parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Profil & Paramètres</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-2xl flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sophie Laurent</span><span class="font-label-sm text-label-sm text-primary font-medium tracking-tight">Premium</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">PRO</span></div><div class="flex items-center justify-between pt-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">dark_mode</span>Mode sombre</span><button aria-label="Basculer le mode sombre" class="w-9 h-5 bg-surface-container-high rounded-full relative p-0.5 transition-colors focus:outline-none" type="button"><span class="block w-4 h-4 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform"></span></button></div></div></aside><div class="lg:pl-72"><header class="fixed top-0 left-0 lg:left-72 right-0 h-16 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm lg:hidden"><img alt="SpendWise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">SpendWise</span></div><div class="hidden md:flex items-center flex-1 max-w-md"><button class="w-full flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:bg-surface-container-low transition-colors" type="button"><span class="flex items-center gap-space-xs font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px]">search</span>Rechercher une transaction...</span><kbd class="font-label-sm text-[11px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">⌘K</kbd></button></div><div class="flex items-center gap-space-sm ml-auto"><button aria-label="Notifications" class="relative p-space-xs rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-[0_1px_3px_rgba(15,23,42,0.05)] focus:ring-2 focus:ring-primary-container" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nouvelle dépense</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover lg:hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/></div></header><main class="relative w-full pt-16 pb-24 lg:pb-space-2xl px-space-md lg:px-space-xl bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full gap-space-lg pb-space-2xl">
+<!-- Top Level Header and Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2xs text-secondary mb-1">
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Gestion Financière</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm font-medium text-primary">Vue Détaillée</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Historique des dépenses</h1>
+<p class="font-body-md text-body-md text-secondary mt-0.5">Gérez, filtrez et exportez l'ensemble de vos transactions bancaires et notes de frais.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-xs">
+<!-- Exporter Dropdown -->
+<div class="relative inline-block text-left" id="exportMenuContainer">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" id="exportDropdownBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exporter</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">expand_more</span>
+</button>
+<!-- Popover Menu -->
+<div class="hidden absolute right-0 mt-2 w-48 rounded-xl bg-surface-container-lowest shadow-xl z-20 py-1.5 focus:outline-none" id="exportDropdownMenu">
+<a class="flex items-center gap-space-xs px-4 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" href="javascript:void(0)" onclick="simulateToast('Export Excel généré avec succès')">
+<span class="material-symbols-outlined text-[18px] text-primary">table_view</span>
+            Format Excel (.xlsx)
+          </a>
+<a class="flex items-center gap-space-xs px-4 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" href="javascript:void(0)" onclick="simulateToast('Rapport PDF téléchargé')">
+<span class="material-symbols-outlined text-[18px] text-error">picture_as_pdf</span>
+            Rapport PDF (.pdf)
+          </a>
+<a class="flex items-center gap-space-xs px-4 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" href="javascript:void(0)" onclick="simulateToast('Format CSV prêt')">
+<span class="material-symbols-outlined text-[18px] text-secondary">data_object</span>
+            Fichier CSV brut
+          </a>
+</div>
+</div>
+<!-- Importer CSV Button -->
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" onclick="openImportModal()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">upload_file</span>
+<span>Importer CSV</span>
+</button>
+<!-- Primary Add Button -->
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-md shadow-primary-container/20" onclick="openAddExpenseModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Ajouter une dépense</span>
+</button>
+</div>
+</div>
+<!-- State Preview Switcher Tabs -->
+<div class="flex items-center justify-between p-1.5 bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-1">
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center gap-1.5" id="tabNormalBtn" onclick="switchState('normal')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">view_list</span>
+<span>Vue normale (8 opérations)</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-medium text-secondary hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" id="tabEmptyBtn" onclick="switchState('empty')" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+<span>État vide</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-medium text-secondary hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" id="tabSkeletonBtn" onclick="switchState('skeleton')" type="button">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span>Chargement (Skeleton)</span>
+</button>
+</div>
+<div class="hidden md:flex items-center gap-2 pr-2 text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Synchronisation bancaire active</span>
+</div>
+</div>
+<!-- Filter & Search Panel -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md lg:p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Search Bar + Reset Row -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-11 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="searchInput" oninput="handleSearch(this.value)" placeholder="Rechercher un commerçant, un mot-clé ou une note..." type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-secondary hover:text-on-surface" id="clearSearchBtn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs self-end lg:self-center">
+<button class="inline-flex items-center gap-1 text-secondary hover:text-error font-label-sm text-label-sm px-space-sm py-2 rounded-lg hover:bg-error-container/20 transition-colors" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Réinitialiser</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips Pill Bar -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+<!-- Periode Pill (Active) -->
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 h-8 px-3 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container/25 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Mars 2025</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<!-- Categorie Dropdown Pill -->
+<div class="relative flex-shrink-0">
+<select class="appearance-none h-8 pl-3 pr-7 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="">Toutes les catégories</option>
+<option value="alimentation">Alimentation</option>
+<option value="transports">Transports</option>
+<option value="loisirs">Sport & Loisirs</option>
+<option value="sante">Santé</option>
+<option value="logement">Logement</option>
+<option value="abonnements">Abonnements</option>
+<option value="equipement">Équipement</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[14px] text-secondary pointer-events-none">expand_more</span>
+</div>
+<!-- Payment Method Dropdown Pill -->
+<div class="relative flex-shrink-0">
+<select class="appearance-none h-8 pl-3 pr-7 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="">Tous les moyens</option>
+<option value="cb">Carte Bancaire</option>
+<option value="apple_pay">Apple Pay / Sans contact</option>
+<option value="virement">Virement</option>
+<option value="prelevement">Prélèvement</option>
+<option value="especes">Espèces</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[14px] text-secondary pointer-events-none">expand_more</span>
+</div>
+<!-- Amount Pill -->
+<div class="relative flex-shrink-0">
+<select class="appearance-none h-8 pl-3 pr-7 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="">Tout montant</option>
+<option value="0-50">Moins de 50 €</option>
+<option value="50-100">50 € à 100 €</option>
+<option value="100+">Plus de 100 €</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[14px] text-secondary pointer-events-none">expand_more</span>
+</div>
+<!-- Receipt Only Checkbox Pill -->
+<label class="flex-shrink-0 inline-flex items-center gap-1.5 h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm cursor-pointer select-none transition-colors">
+<input class="w-3.5 h-3.5 rounded text-primary-container accent-primary-container" id="receiptOnlyCheckbox" onchange="filterReceipts(this.checked)" type="checkbox"/>
+<span class="material-symbols-outlined text-[16px] text-secondary">attach_file</span>
+<span>Avec reçu uniquement</span>
+</label>
+</div>
+</div>
+<!-- State 1: Normal View Table -->
+<div class="flex flex-col gap-space-md" id="stateNormal">
+<!-- Desktop Table (Hidden on small screens) -->
+<div class="hidden lg:block bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low/70 text-secondary font-label-sm text-label-sm tracking-wider uppercase border-b-0">
+<th class="py-3.5 px-6 font-semibold">Date</th>
+<th class="py-3.5 px-4 font-semibold">Commerçant & Note</th>
+<th class="py-3.5 px-4 font-semibold">Catégorie</th>
+<th class="py-3.5 px-4 font-semibold">Paiement</th>
+<th class="py-3.5 px-4 font-semibold text-center">Justificatif</th>
+<th class="py-3.5 px-6 font-semibold text-right">Montant</th>
+<th class="py-3.5 px-6 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="expenseTableBody">
+<!-- Row 1: Monoprix -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="Monoprix Gourmet" data-receipt="true">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">18 Mars 2025</span>
+<span class="block text-[11px] text-secondary">19:42</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/15 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">Monoprix Gourmet</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Courses de la semaine</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Alimentation
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">credit_card</span>
+                CB •• 4291
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] hover:bg-primary-container/20 transition-colors" title="1 reçu attaché (ticket_monoprix.pdf)" type="button">
+<span class="material-symbols-outlined text-[15px]">attach_file</span>
+<span>1 reçu</span>
+</button>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-86,40 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: SNCF Connect -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="SNCF Connect" data-receipt="true">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">17 Mars 2025</span>
+<span class="block text-[11px] text-secondary">08:15</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">train</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">SNCF Connect</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Billet TGV Paris-Lyon</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                Transports
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">phone_iphone</span>
+                Apple Pay
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] hover:bg-primary-container/20 transition-colors" title="Billet e-ticket joint" type="button">
+<span class="material-symbols-outlined text-[15px]">attach_file</span>
+<span>1 reçu</span>
+</button>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-79,00 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Basic-Fit -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="Basic-Fit" data-receipt="false">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">16 Mars 2025</span>
+<span class="block text-[11px] text-secondary">06:00</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">fitness_center</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">Basic-Fit</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Abonnement mensuel</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Sport & Loisirs
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync_alt</span>
+                Prélèvement
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="font-label-sm text-[11px] text-secondary italic">Aucun</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-29,99 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Pharmacie du Marais -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="Pharmacie du Marais" data-receipt="true">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">15 Mars 2025</span>
+<span class="block text-[11px] text-secondary">14:22</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_pharmacy</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">Pharmacie du Marais</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Médicaments & soins</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-800">
+<span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                Santé
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">credit_card</span>
+                CB •• 4291
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] hover:bg-primary-container/20 transition-colors" title="Facturette pharmacie" type="button">
+<span class="material-symbols-outlined text-[15px]">attach_file</span>
+<span>1 reçu</span>
+</button>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-23,50 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: TotalEnergies -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="TotalEnergies" data-receipt="true">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">14 Mars 2025</span>
+<span class="block text-[11px] text-secondary">03:30</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">TotalEnergies</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Facture électricité</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Logement
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync_alt</span>
+                Prélèvement
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] hover:bg-primary-container/20 transition-colors" title="Facture PDF Mars 2025" type="button">
+<span class="material-symbols-outlined text-[15px]">attach_file</span>
+<span>1 reçu</span>
+</button>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-112,30 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Restaurant Le Comptoir -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="Restaurant Le Comptoir" data-receipt="true">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">12 Mars 2025</span>
+<span class="block text-[11px] text-secondary">13:10</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">Restaurant Le Comptoir</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Déjeuner équipe</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Alimentation
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">contactless</span>
+                Sans contact
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] hover:bg-primary-container/20 transition-colors" title="Addition restaurant" type="button">
+<span class="material-symbols-outlined text-[15px]">attach_file</span>
+<span>1 reçu</span>
+</button>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-45,00 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Netflix France -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="Netflix France" data-receipt="false">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">10 Mars 2025</span>
+<span class="block text-[11px] text-secondary">00:01</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">movie</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">Netflix France</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Standard 4K</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Abonnements
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">credit_card</span>
+                CB •• 4291
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="font-label-sm text-[11px] text-secondary italic">Aucun</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-13,49 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Fnac Darty -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors expense-row" data-merchant="Fnac Darty" data-receipt="true">
+<td class="py-4 px-6 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="font-medium text-on-surface">08 Mars 2025</span>
+<span class="block text-[11px] text-secondary">16:48</span>
+</td>
+<td class="py-4 px-4 min-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">Fnac Darty</div>
+<div class="font-body-sm text-[12px] text-secondary truncate">Câble USB-C & chargeur</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                Équipement
+              </span>
+</td>
+<td class="py-4 px-4 font-body-sm text-body-sm text-secondary whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">phone_iphone</span>
+                Apple Pay
+              </span>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] hover:bg-primary-container/20 transition-colors" title="Ticket de caisse scanné" type="button">
+<span class="material-symbols-outlined text-[15px]">attach_file</span>
+<span>1 reçu</span>
+</button>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight">-34,90 €</span>
+</td>
+<td class="py-4 px-6 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors" onclick="deleteRow(this)" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Mobile Responsive Cards List (Visible only on < lg) -->
+<div class="lg:hidden flex flex-col gap-3">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-container/15 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface truncate">Monoprix Gourmet</h3>
+<p class="font-body-sm text-[12px] text-secondary truncate">Courses de la semaine</p>
+</div>
+</div>
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight whitespace-nowrap">-86,40 €</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-100 text-emerald-800">Alimentation</span>
+<span class="text-secondary text-[11px] font-body-sm">18 Mars</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center text-primary text-[12px]"><span class="material-symbols-outlined text-[16px]">attach_file</span>Reçu</span>
+<button class="p-1 text-secondary" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">train</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface truncate">SNCF Connect</h3>
+<p class="font-body-sm text-[12px] text-secondary truncate">Billet TGV Paris-Lyon</p>
+</div>
+</div>
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight whitespace-nowrap">-79,00 €</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-purple-100 text-purple-800">Transports</span>
+<span class="text-secondary text-[11px] font-body-sm">17 Mars</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center text-primary text-[12px]"><span class="material-symbols-outlined text-[16px]">attach_file</span>Reçu</span>
+<button class="p-1 text-secondary" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">fitness_center</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface truncate">Basic-Fit</h3>
+<p class="font-body-sm text-[12px] text-secondary truncate">Abonnement mensuel</p>
+</div>
+</div>
+<span class="font-label-md text-title-md font-semibold text-error tracking-tight whitespace-nowrap">-29,99 €</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-blue-100 text-blue-800">Sport</span>
+<span class="text-secondary text-[11px] font-body-sm">16 Mars</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-secondary text-[11px] italic">Sans justificatif</span>
+<button class="p-1 text-secondary" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Bar & Pagination -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Total Summary Indicator -->
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<span>Total affiché :</span>
+<span class="font-semibold text-on-surface" id="summaryCounter">8 dépenses</span>
+<span>•</span>
+<span class="font-semibold text-error" id="summaryTotal">424,58 €</span>
+</div>
+<!-- Pagination and rows-per-page -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary hidden sm:inline">Lignes :</span>
+<select class="h-8 pl-2 pr-6 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="" value="10">10 par page</option>
+<option value="25">25 par page</option>
+<option value="50">50 par page</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-on-surface disabled:opacity-40 transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center font-label-sm text-label-sm font-semibold bg-primary text-on-primary shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center font-label-sm text-label-sm text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center font-label-sm text-label-sm text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" type="button">3</button>
+<span class="w-6 text-center text-secondary">...</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center font-label-sm text-label-sm text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" type="button">5</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- State 2: Empty State View (Initially Hidden) -->
+<div class="hidden flex-col items-center justify-center bg-surface-container-lowest rounded-2xl py-16 px-6 text-center shadow-sm" id="stateEmpty">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[40px] text-primary">receipt_long</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mb-2">Aucune dépense trouvée</h2>
+<p class="font-body-md text-body-md text-secondary max-w-md mb-6">
+      Aucune transaction ne correspond à vos filtres actuels ou vous n'avez pas encore enregistré de dépense pour ce mois.
+    </p>
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_alt_off</span>
+<span>Effacer les filtres</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors" onclick="openAddExpenseModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Créer une dépense</span>
+</button>
+</div>
+</div>
+<!-- State 3: Skeleton / Loading View (Initially Hidden) -->
+<div class="hidden flex-col gap-3" id="stateSkeleton">
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col gap-4 animate-pulse">
+<div class="h-6 bg-surface-container rounded-md w-1/4"></div>
+<div class="space-y-3">
+<div class="h-14 bg-surface-container-low rounded-xl w-full"></div>
+<div class="h-14 bg-surface-container-low rounded-xl w-full"></div>
+<div class="h-14 bg-surface-container-low rounded-xl w-full"></div>
+<div class="h-14 bg-surface-container-low rounded-xl w-full"></div>
+<div class="h-14 bg-surface-container-low rounded-xl w-full"></div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<div class="h-5 bg-surface-container rounded w-36"></div>
+<div class="h-8 bg-surface-container rounded-lg w-48"></div>
+</div>
+</div>
+</div>
+<!-- Modal 1: Importer CSV Wizard -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm" id="importModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl relative">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Assistant d'importation CSV</h2>
+</div>
+<button class="text-secondary hover:text-on-surface" onclick="closeImportModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-4">
+        Téléversez votre relevé bancaire (Boursorama, BNP, Crédit Agricole, Revolut...). SpendWise mappera automatiquement vos catégories.
+      </p>
+<!-- Drag & Drop Zone -->
+<div class="border-2 border-dashed border-surface-container-high rounded-xl p-8 text-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer mb-4" onclick="document.getElementById('fileInput').click()">
+<input accept=".csv" class="hidden" id="fileInput" onchange="handleFileChosen(this)" type="file"/>
+<span class="material-symbols-outlined text-[36px] text-primary mb-2">cloud_upload</span>
+<p class="font-label-md text-label-md text-on-surface font-semibold" id="fileStatusText">Glissez votre fichier .CSV ici</p>
+<p class="font-label-sm text-label-sm text-secondary mt-1">ou cliquez pour parcourir vos dossiers (max. 15 Mo)</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex items-center gap-2 text-secondary font-label-sm text-label-sm mb-6">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>Vos données financières sont chiffrées de bout en bout et traitées localement.</span>
+</div>
+<div class="flex items-center justify-end gap-2">
+<button class="px-space-md py-2 rounded-xl text-secondary hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="closeImportModal()" type="button">
+          Annuler
+        </button>
+<button class="px-space-md py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all" onclick="completeImport()" type="button">
+          Lancer l'importation
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal 2: Nouvelle Dépense Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm" id="addExpenseModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl relative max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ajouter une dépense</h2>
+</div>
+<button class="text-secondary hover:text-on-surface" onclick="closeAddExpenseModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="space-y-4" id="expenseForm" onsubmit="submitExpense(event)">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Montant (€)</label>
+<div class="relative">
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-title-md text-title-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="0,00" required="" step="0.01" type="number"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-secondary font-semibold">EUR</span>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Commerçant / Bénéficiaire</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="ex. Monoprix, Uber, Apple..." required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Date</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" required="" type="date" value="2025-03-18"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Catégorie</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all cursor-pointer">
+<option value="Alimentation">Alimentation</option>
+<option value="Transports">Transports</option>
+<option value="Sport & Loisirs">Sport & Loisirs</option>
+<option value="Santé">Santé</option>
+<option value="Logement">Logement</option>
+<option value="Abonnements">Abonnements</option>
+<option value="Équipement">Équipement</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Moyen de paiement</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all cursor-pointer">
+<option value="Carte Bancaire">Carte Bancaire</option>
+<option value="Apple Pay">Apple Pay</option>
+<option value="Virement">Virement</option>
+<option value="Prélèvement">Prélèvement</option>
+<option value="Espèces">Espèces</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Justificatif / Reçu</label>
+<div class="relative h-11 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer border border-dashed border-outline-variant">
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">attach_file</span>
+<span>Joindre un reçu</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-1">Note personnelle (facultatif)</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="Détail du repas, référence ticket..." type="text"/>
+</div>
+<div class="flex items-center justify-end gap-2 pt-3">
+<button class="px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="closeAddExpenseModal()" type="button">
+            Annuler
+          </button>
+<button class="px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary shadow-sm transition-all" type="submit">
+            Enregistrer la transaction
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Floating Action Button for Mobile -->
+<div class="lg:hidden fixed right-6 bottom-20 z-40">
+<button aria-label="Ajouter une dépense rapide" class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xl shadow-primary-container/30 active:scale-95 transition-transform hover:bg-primary hover:text-on-primary" onclick="openAddExpenseModal()" type="button">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple Dropdown Toggle
+  const exportBtn = document.getElementById('exportDropdownBtn');
+  const exportMenu = document.getElementById('exportDropdownMenu');
+  
+  if (exportBtn && exportMenu) {
+    exportBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      exportMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!exportMenu.contains(e.target)) {
+        exportMenu.classList.add('hidden');
+      }
+    });
+  }
+
+  // State Switcher (Normal / Empty / Skeleton)
+  function switchState(mode) {
+    const normalView = document.getElementById('stateNormal');
+    const emptyView = document.getElementById('stateEmpty');
+    const skeletonView = document.getElementById('stateSkeleton');
+
+    const tabNormal = document.getElementById('tabNormalBtn');
+    const tabEmpty = document.getElementById('tabEmptyBtn');
+    const tabSkeleton = document.getElementById('tabSkeletonBtn');
+
+    [normalView, emptyView, skeletonView].forEach(el => el.classList.add('hidden'));
+    [tabNormal, tabEmpty, tabSkeleton].forEach(btn => {
+      btn.className = "px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-medium text-secondary hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5";
+    });
+
+    if (mode === 'normal') {
+      normalView.classList.remove('hidden');
+      tabNormal.className = "px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center gap-1.5";
+    } else if (mode === 'empty') {
+      emptyView.classList.remove('hidden');
+      emptyView.classList.add('flex');
+      tabEmpty.className = "px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center gap-1.5";
+    } else if (mode === 'skeleton') {
+      skeletonView.classList.remove('hidden');
+      tabSkeleton.className = "px-space-md py-1.5 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center gap-1.5";
+    }
+  }
+
+  // Modals management
+  function openImportModal() {
+    document.getElementById('importModal').classList.remove('hidden');
+  }
+  function closeImportModal() {
+    document.getElementById('importModal').classList.add('hidden');
+  }
+
+  function openAddExpenseModal() {
+    document.getElementById('addExpenseModal').classList.remove('hidden');
+  }
+  function closeAddExpenseModal() {
+    document.getElementById('addExpenseModal').classList.add('hidden');
+  }
+
+  function handleFileChosen(input) {
+    if (input.files && input.files[0]) {
+      document.getElementById('fileStatusText').textContent = 'Fichier sélectionné : ' + input.files[0].name;
+    }
+  }
+
+  function completeImport() {
+    closeImportModal();
+    simulateToast('Importation terminée : 14 nouvelles transactions ajoutées');
+  }
+
+  function submitExpense(event) {
+    event.preventDefault();
+    closeAddExpenseModal();
+    simulateToast('Nouvelle dépense enregistrée avec succès !');
+  }
+
+  // Interactive Live Search & Filter
+  function handleSearch(term) {
+    const clearBtn = document.getElementById('clearSearchBtn');
+    clearBtn.classList.toggle('hidden', !term);
+
+    const rows = document.querySelectorAll('.expense-row');
+    let visibleCount = 0;
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      if (text.includes(term.toLowerCase())) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('summaryCounter').textContent = visibleCount + ' dépense' + (visibleCount > 1 ? 's' : '');
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('searchInput');
+    input.value = '';
+    handleSearch('');
+  }
+
+  function filterReceipts(onlyWithReceipt) {
+    const rows = document.querySelectorAll('.expense-row');
+    let count = 0;
+    rows.forEach(row => {
+      const hasReceipt = row.getAttribute('data-receipt') === 'true';
+      if (!onlyWithReceipt || hasReceipt) {
+        row.style.display = '';
+        count++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+    document.getElementById('summaryCounter').textContent = count + ' dépense' + (count > 1 ? 's' : '');
+  }
+
+  function resetFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('clearSearchBtn').classList.add('hidden');
+    const receiptCheckbox = document.getElementById('receiptOnlyCheckbox');
+    if (receiptCheckbox) receiptCheckbox.checked = false;
+
+    const rows = document.querySelectorAll('.expense-row');
+    rows.forEach(row => row.style.display = '');
+    document.getElementById('summaryCounter').textContent = '8 dépenses';
+    switchState('normal');
+    simulateToast('Filtres réinitialisés');
+  }
+
+  function deleteRow(btn) {
+    const row = btn.closest('tr');
+    if (row) {
+      row.remove();
+      simulateToast('Dépense supprimée');
+    }
+  }
+
+  // Toast Notification Helper
+  function simulateToast(message) {
+    const toastRoot = document.getElementById('toast-root');
+    if (!toastRoot) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'pointer-events-auto flex items-center gap-2 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl font-label-md text-label-md transition-all duration-300 transform translate-y-4 opacity-0';
+    toast.innerHTML = `<span class="material-symbols-outlined text-[18px] text-primary-fixed">check_circle</span><span>${message}</span>`;
+    
+    toastRoot.appendChild(toast);
+
+    requestAnimationFrame(() => {
+      toast.classList.remove('translate-y-4', 'opacity-0');
+    });
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'translate-y-2');
+      setTimeout(() => toast.remove(), 300);
+    }, 3200);
+  }
+</script></main></div><nav class="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50 px-space-sm flex items-center justify-around" data-active-classes="text-primary font-semibold"><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-[10px] mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[10px] mt-0.5">Dépenses</span></a><div class="flex items-center justify-center px-space-xs"><button aria-label="Ajouter une dépense" class="-mt-5 w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg shadow-primary-container/30 hover:bg-primary hover:text-on-primary transition-transform active:scale-95" type="button"><span class="material-symbols-outlined text-[26px]">add</span></button></div><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-sm text-[10px] mt-0.5">Budgets</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil-&-parametres" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-[10px] mt-0.5">Profil</span></a></nav><div class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center" id="modal-root"></div><div class="fixed bottom-20 lg:bottom-6 right-4 z-50 flex flex-col gap-2 pointer-events-none" id="toast-root"></div></body></html>

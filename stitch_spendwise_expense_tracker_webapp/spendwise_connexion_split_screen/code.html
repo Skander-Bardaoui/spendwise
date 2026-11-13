@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Connexion — SpendWise</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#00367a",
+            "on-tertiary-fixed": "#001a42",
+            "surface-container-lowest": "#ffffff",
+            "surface-dim": "#cbdbf5",
+            "on-error": "#ffffff",
+            "secondary-container": "#dae2fd",
+            "tertiary-container": "#71a1ff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#bec6e0",
+            "surface": "#f8f9ff",
+            "on-primary-fixed": "#002113",
+            "inverse-surface": "#213145",
+            "on-tertiary-fixed-variant": "#004395",
+            "surface-container": "#e5eeff",
+            "outline-variant": "#bbcabf",
+            "on-background": "#0b1c30",
+            "surface-variant": "#d3e4fe",
+            "tertiary": "#005ac2",
+            "primary-fixed": "#6ffbbe",
+            "background": "#f8f9ff",
+            "inverse-on-surface": "#eaf1ff",
+            "on-secondary-container": "#5c647a",
+            "primary": "#006c49",
+            "tertiary-fixed-dim": "#adc6ff",
+            "primary-container": "#10b981",
+            "primary-fixed-dim": "#4edea3",
+            "surface-container-low": "#eff4ff",
+            "secondary": "#565e74",
+            "outline": "#6c7a71",
+            "surface-container-highest": "#d3e4fe",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#3c4a42",
+            "surface-bright": "#f8f9ff",
+            "surface-container-high": "#dce9ff",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#d8e2ff",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#3f465c",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#dae2fd",
+            "on-surface": "#0b1c30",
+            "on-primary-fixed-variant": "#005236",
+            "on-primary-container": "#00422b",
+            "surface-tint": "#006c49",
+            "on-secondary-fixed": "#131b2e",
+            "inverse-primary": "#4edea3"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="h-full bg-surface-container-lowest font-sans text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<div class="min-h-screen w-full flex flex-col lg:flex-row">
+<!-- LEFT COLUMN: Brand Showcase & Social Proof (52% on desktop) -->
+<div class="relative hidden lg:flex lg:w-[52%] xl:w-[54%] bg-gradient-to-br from-slate-950 via-[#06241a] to-slate-900 text-white p-12 xl:p-16 flex-col justify-between overflow-hidden">
+<!-- Ambient glowing meshes & aura blobs -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-[#10b981]/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-24 w-[420px] h-[420px] bg-emerald-600/15 rounded-full blur-[110px] pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-40"></div>
+<!-- Header / Logo -->
+<div class="relative z-10">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-300 flex items-center justify-center shadow-lg shadow-emerald-500/30">
+<span class="material-symbols-outlined text-[26px] text-slate-950 font-bold">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold tracking-tight text-white flex items-center gap-1.5">
+            SpendWise <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+</span>
+<span class="text-xs font-medium text-emerald-300/80 tracking-wide">Maîtrisez chaque euro, simplement</span>
+</div>
+</div>
+</div>
+<!-- Floating UI Glassmorphic Cards Stack -->
+<div class="relative z-10 my-auto py-8 space-y-4 max-w-lg">
+<!-- Card 1: Économies réalisées -->
+<div class="backdrop-blur-xl bg-white/[0.07] border border-white/10 rounded-2xl p-5 shadow-2xl shadow-black/40 hover:bg-white/[0.09] transition-all transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Économies réalisées ce mois</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            +18.4%
+          </span>
+</div>
+<div class="flex items-end justify-between mt-3">
+<div>
+<div class="text-3xl font-extrabold tracking-tight text-white">+342,10 €</div>
+<p class="text-xs text-slate-400 mt-0.5">vs mois précédent (288,50 €)</p>
+</div>
+<!-- Sparkline SVG -->
+<div class="w-28 h-9">
+<svg class="w-full h-full stroke-emerald-400 fill-none" viewbox="0 0 100 30">
+<path d="M0,25 Q15,22 28,16 T55,14 T80,6 T100,2" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="fill-emerald-400" cx="100" cy="2" r="3.5"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Card 2: Alerte budget respectée -->
+<div class="backdrop-blur-xl bg-white/[0.06] border border-white/10 rounded-2xl p-4 shadow-xl shadow-black/30 hover:bg-white/[0.08] transition-all ml-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+</div>
+<span class="text-xs font-semibold text-slate-200">Budget Alimentation &amp; Courses</span>
+</div>
+<span class="text-xs font-bold text-emerald-300">84% utilisé</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full h-2 bg-white/10 rounded-full overflow-hidden mt-2">
+<div class="h-full bg-gradient-to-r from-emerald-500 to-teal-300 rounded-full" style="width: 84%;"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-slate-400 mt-2">
+<span>420 € dépensés sur 500 €</span>
+<span class="text-emerald-400 font-medium">Dans la cible ✓</span>
+</div>
+</div>
+<!-- Card 3: Mini transaction card -->
+<div class="backdrop-blur-xl bg-white/[0.05] border border-white/10 rounded-2xl p-3.5 shadow-lg shadow-black/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest text-slate-900 flex items-center justify-center font-bold text-xs shadow">
+            M
+          </div>
+<div>
+<div class="text-xs font-semibold text-white">Monoprix Madeleine</div>
+<div class="text-[11px] text-slate-400 flex items-center gap-1.5">
+<span>Aujourd'hui, 14:28</span>
+<span>•</span>
+<span class="text-emerald-400 font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Reçu validé
+              </span>
+</div>
+</div>
+</div>
+<div class="text-sm font-bold text-white tracking-tight">-45,90 €</div>
+</div>
+</div>
+<!-- Testimonial & Trust footer -->
+<div class="relative z-10 space-y-6 pt-4 border-t border-white/10">
+<!-- Testimonial quote card -->
+<div class="flex items-start gap-3.5 backdrop-blur-md bg-white/[0.04] p-4 rounded-xl border border-white/5">
+<img alt="Sophie Laurent" class="w-10 h-10 rounded-full object-cover ring-2 ring-emerald-400/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/>
+<div class="flex-1 text-xs">
+<div class="flex items-center gap-1 text-amber-400 mb-1">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+<p class="text-slate-200 italic leading-relaxed">
+            « SpendWise m'a permis d'économiser plus de 240 € dès le premier mois sans contrainte. »
+          </p>
+<span class="text-slate-400 font-medium block mt-1">Sophie Laurent — Paris</span>
+</div>
+</div>
+<!-- Trust indicators -->
+<div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-slate-300">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-emerald-400">lock</span>
+<span>Chiffrement AES-256</span>
+</div>
+<span class="text-slate-600">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-emerald-400">verified_user</span>
+<span>Agrément ACPR / Banque de France</span>
+</div>
+<span class="text-slate-600">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-emerald-400">security</span>
+<span>RGPD Conforme</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Authentication Form (48% on desktop, 100% on mobile) -->
+<div class="w-full lg:w-[48%] xl:w-[46%] min-h-screen bg-surface-container-lowest flex flex-col justify-between p-6 sm:p-10 lg:p-12 xl:p-16 overflow-y-auto">
+<!-- Top Bar: Mobile Logo + Language / Help -->
+<div class="w-full flex items-center justify-between mb-8 sm:mb-12">
+<!-- Mobile brand only -->
+<div class="flex items-center gap-2 lg:hidden">
+<div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px] text-white">account_balance_wallet</span>
+</div>
+<span class="font-bold text-lg text-slate-900 tracking-tight">SpendWise</span>
+</div>
+<div class="hidden lg:block"></div>
+<!-- Help / Language switch -->
+<div class="flex items-center gap-4 text-xs font-medium text-slate-500">
+<button class="hover:text-slate-900 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+<span>Besoin d'aide ?</span>
+</button>
+<span class="text-slate-300">|</span>
+<div class="inline-flex items-center rounded-lg bg-slate-100 p-0.5 text-xs font-semibold">
+<span class="px-2 py-0.5 rounded bg-white text-slate-900 shadow-xs">FR</span>
+<a class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition-colors" href="#">EN</a>
+</div>
+</div>
+</div>
+<!-- Main Auth Container -->
+<div class="w-full max-w-[440px] mx-auto my-auto py-2">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900" id="form-title">
+          Bon retour parmi nous
+        </h1>
+<p class="text-sm text-slate-500 mt-2" id="form-subtitle">
+          Connectez-vous à votre espace SpendWise pour suivre vos finances.
+        </p>
+</div>
+<!-- Segmented Tab Selector -->
+<div class="grid grid-cols-2 p-1 bg-slate-100 rounded-xl mb-6 text-center text-xs font-semibold" role="tablist">
+<button class="py-2.5 rounded-lg text-slate-900 bg-white shadow-sm transition-all duration-150" id="tab-login" onclick="switchAuthMode('login')" type="button">
+          Se connecter
+        </button>
+<button class="py-2.5 rounded-lg text-slate-500 hover:text-slate-900 transition-all duration-150" id="tab-register" onclick="switchAuthMode('register')" type="button">
+          Créer un compte
+        </button>
+</div>
+<!-- Social Login Buttons -->
+<div class="grid grid-cols-2 gap-3 mb-6">
+<button class="h-11 flex items-center justify-center gap-2.5 px-4 rounded-xl border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50/80 text-slate-700 text-xs font-semibold transition-all shadow-xs" onclick="handleSocial('Google')" type="button">
+<svg class="w-4 h-4 flex-shrink-0" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span class="truncate">Continuer avec Google</span>
+</button>
+<button class="h-11 flex items-center justify-center gap-2.5 px-4 rounded-xl border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50/80 text-slate-700 text-xs font-semibold transition-all shadow-xs" onclick="handleSocial('Apple')" type="button">
+<svg class="w-4 h-4 fill-current text-slate-900 flex-shrink-0" viewbox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.78 1.06-1.85.94-2.94-.92.04-2.03.62-2.69 1.4-.58.67-1.09 1.76-.95 2.81 1.03.08 2.08-.49 2.7-1.27z"></path>
+</svg>
+<span class="truncate">Continuer avec Apple</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="relative my-6">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200"></div>
+</div>
+<div class="relative flex justify-center text-xs">
+<span class="bg-surface-container-lowest px-3 text-slate-400">ou avec votre adresse email</span>
+</div>
+</div>
+<!-- Feedback Alert banner -->
+<div class="hidden mb-4 p-3 bg-red-50 border border-red-200 rounded-xl flex items-start gap-2.5 text-red-800 text-xs" id="auth-alert">
+<span class="material-symbols-outlined text-[18px] text-red-600 flex-shrink-0">error</span>
+<div class="flex-1" id="alert-message">Identifiant ou mot de passe incorrect.</div>
+<button class="text-red-500 hover:text-red-700" onclick="closeAuthAlert()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Form -->
+<form class="space-y-4" onsubmit="onFormSubmit(event)">
+<!-- Name (only for register) -->
+<div class="hidden flex-col gap-1.5" id="field-name-wrap">
+<label class="text-xs font-semibold text-slate-700" for="auth-name">Nom complet</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-slate-400 text-[18px]">person</span>
+<input class="w-full h-11 pl-10 pr-3.5 rounded-xl border border-slate-200 focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-sm text-slate-900 placeholder:text-slate-400 transition-all outline-none" id="auth-name" placeholder="Sophie Laurent" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-slate-700" for="auth-email">Adresse email</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-slate-400 text-[18px]">mail</span>
+<input class="w-full h-11 pl-10 pr-3.5 rounded-xl border border-slate-200 focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-sm text-slate-900 placeholder:text-slate-400 transition-all outline-none" id="auth-email" placeholder="sophie.laurent@exemple.fr" required="" type="email" value="sophie.laurent@exemple.fr"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold text-slate-700" for="auth-password">Mot de passe</label>
+<a class="text-xs font-medium text-emerald-600 hover:text-emerald-700 hover:underline transition-colors" href="#" id="forgot-password-link" onclick="triggerForgot(); return false;">
+              Mot de passe oublié ?
+            </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-slate-400 text-[18px]">lock</span>
+<input class="w-full h-11 pl-10 pr-11 rounded-xl border border-slate-200 focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-sm text-slate-900 placeholder:text-slate-400 transition-all outline-none font-mono tracking-wider" id="auth-password" placeholder="••••••••••••" required="" type="password" value="secretpass123"/>
+<button aria-label="Afficher ou masquer" class="absolute right-3 p-1 text-slate-400 hover:text-slate-600 transition-colors" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me Checkbox -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-emerald-500 focus:ring-emerald-400 accent-emerald-500 cursor-pointer" type="checkbox"/>
+<span class="text-xs text-slate-600">Se souvenir de moi pendant 30 jours</span>
+</label>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full h-12 mt-2 bg-[#10B981] hover:bg-emerald-600 active:bg-emerald-700 text-white rounded-xl text-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition-all duration-150 transform hover:-translate-y-0.5" id="btn-auth-submit" type="submit">
+<span id="btn-text">Se connecter à mon espace</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Mode switch prompt below button -->
+<div class="text-center mt-6 text-xs text-slate-500">
+<span id="switch-prompt-label">Pas encore de compte ?</span>
+<button class="font-semibold text-emerald-600 hover:text-emerald-700 hover:underline ml-1 cursor-pointer" id="switch-prompt-btn" onclick="toggleAuthMode()" type="button">
+          Créer un compte gratuitement
+        </button>
+</div>
+</div>
+<!-- Bottom Legal / Footer -->
+<div class="w-full pt-8 mt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
+<span>© 2025 SpendWise SAS. Tous droits réservés.</span>
+<div class="flex items-center gap-4">
+<a class="hover:text-slate-600 transition-colors" href="#">Mentions légales</a>
+<span>•</span>
+<a class="hover:text-slate-600 transition-colors" href="#">Politique de confidentialité</a>
+<span>•</span>
+<a class="hover:text-slate-600 transition-colors" href="#">Sécurité</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let authMode = 'login';
+
+  function switchAuthMode(mode) {
+    authMode = mode;
+    const tabLogin = document.getElementById('tab-login');
+    const tabRegister = document.getElementById('tab-register');
+    const fieldName = document.getElementById('field-name-wrap');
+    const forgotLink = document.getElementById('forgot-password-link');
+    const btnText = document.getElementById('btn-text');
+    const formTitle = document.getElementById('form-title');
+    const formSubtitle = document.getElementById('form-subtitle');
+    const promptLabel = document.getElementById('switch-prompt-label');
+    const promptBtn = document.getElementById('switch-prompt-btn');
+
+    closeAuthAlert();
+
+    if (mode === 'register') {
+      tabRegister.className = 'py-2.5 rounded-lg text-slate-900 bg-white shadow-sm transition-all duration-150';
+      tabLogin.className = 'py-2.5 rounded-lg text-slate-500 hover:text-slate-900 transition-all duration-150';
+
+      fieldName.classList.remove('hidden');
+      fieldName.classList.add('flex');
+      forgotLink.classList.add('hidden');
+
+      formTitle.textContent = 'Créer un compte SpendWise';
+      formSubtitle.textContent = 'Commencez à optimiser vos dépenses en moins de 2 minutes.';
+      btnText.textContent = 'Créer mon compte gratuitement';
+
+      promptLabel.textContent = 'Vous avez déjà un compte ?';
+      promptBtn.textContent = 'Se connecter';
+    } else {
+      tabLogin.className = 'py-2.5 rounded-lg text-slate-900 bg-white shadow-sm transition-all duration-150';
+      tabRegister.className = 'py-2.5 rounded-lg text-slate-500 hover:text-slate-900 transition-all duration-150';
+
+      fieldName.classList.add('hidden');
+      fieldName.classList.remove('flex');
+      forgotLink.classList.remove('hidden');
+
+      formTitle.textContent = 'Bon retour parmi nous';
+      formSubtitle.textContent = 'Connectez-vous à votre espace SpendWise pour suivre vos finances.';
+      btnText.textContent = 'Se connecter à mon espace';
+
+      promptLabel.textContent = 'Pas encore de compte ?';
+      promptBtn.textContent = 'Créer un compte gratuitement';
+    }
+  }
+
+  function toggleAuthMode() {
+    switchAuthMode(authMode === 'login' ? 'register' : 'login');
+  }
+
+  function togglePasswordVisibility() {
+    const input = document.getElementById('auth-password');
+    const icon = document.getElementById('eye-icon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function triggerForgot() {
+    showAlert('Un lien de réinitialisation sécurisé a été envoyé si l\'adresse existe.');
+  }
+
+  function handleSocial(provider) {
+    showAlert('Redirection sécurisée vers ' + provider + '...');
+  }
+
+  function showAlert(msg) {
+    const box = document.getElementById('auth-alert');
+    document.getElementById('alert-message').textContent = msg;
+    box.classList.remove('hidden');
+  }
+
+  function closeAuthAlert() {
+    document.getElementById('auth-alert').classList.add('hidden');
+  }
+
+  function onFormSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btn-auth-submit');
+    const originalContent = btn.innerHTML;
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Chargement...</span>';
+
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Connecté ! Redirection...</span>';
+      btn.classList.add('bg-emerald-700');
+    }, 1000);
+  }
+</script>
+</body></html>

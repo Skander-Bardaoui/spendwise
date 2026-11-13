@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#bbcabf","surface-container-low":"#eff4ff","on-tertiary-container":"#00367a","inverse-primary":"#4edea3","on-surface-variant":"#3c4a42","on-tertiary-fixed":"#001a42","on-surface":"#0b1c30","on-primary":"#ffffff","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-container":"#00422b","surface-tint":"#006c49","surface-bright":"#f8f9ff","background":"#f8f9ff","primary-container":"#10b981","surface-container-high":"#dce9ff","on-secondary-fixed":"#131b2e","surface":"#f8f9ff","on-primary-fixed":"#002113","error":"#ba1a1a","error-container":"#ffdad6","secondary":"#565e74","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-error-container":"#93000a","primary-fixed":"#6ffbbe","primary":"#006c49","outline":"#6c7a71","tertiary-fixed":"#d8e2ff","on-primary-fixed-variant":"#005236","secondary-fixed":"#dae2fd","on-error":"#ffffff","tertiary-fixed-dim":"#adc6ff","primary-fixed-dim":"#4edea3","tertiary":"#005ac2","tertiary-container":"#71a1ff","secondary-fixed-dim":"#bec6e0","on-tertiary":"#ffffff","surface-dim":"#cbdbf5","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004395","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","inverse-on-surface":"#eaf1ff","secondary-container":"#dae2fd"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem",gutter:"1.5rem","space-sm":"0.75rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-xs":"0.5rem","space-xl":"2rem","space-2xs":"0.25rem",margin:"2rem","space-lg":"1.5rem","space-2xl":"3rem"},fontFamily:{"headline-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"numeric-lg":["Inter"],"title-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"]},fontSize:{"headline-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"600"}],"numeric-lg":["2rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"title-md":["1.125rem",{lineHeight:"1.625rem",letterSpacing:"-0.005em",fontWeight:"500"}],"label-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"display-lg":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="hidden lg:flex fixed left-0 top-0 bottom-0 w-72 bg-surface-container-lowest flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="SpendWise Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">SpendWise</span></div><nav class="px-space-md py-space-sm space-y-1 flex-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Dépenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="recurrentes" href="#"><span class="material-symbols-outlined text-[20px]">sync</span><span>Récurrentes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[20px]">pie_chart</span><span>Budgets</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Catégories</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="profil-&amp;-parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Profil &amp; Paramètres</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-2xl flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sophie Laurent</span><span class="font-label-sm text-label-sm text-primary font-medium tracking-tight">Premium</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">PRO</span></div><div class="flex items-center justify-between pt-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">dark_mode</span>Mode sombre</span><button aria-label="Basculer le mode sombre" class="w-9 h-5 bg-surface-container-high rounded-full relative p-0.5 transition-colors focus:outline-none" type="button"><span class="block w-4 h-4 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform"></span></button></div></div></aside><div class="lg:pl-72"><header class="fixed top-0 left-0 lg:left-72 right-0 h-16 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm lg:hidden"><img alt="SpendWise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">SpendWise</span></div><div class="hidden md:flex items-center flex-1 max-w-md"><button class="w-full flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:bg-surface-container-low transition-colors" type="button"><span class="flex items-center gap-space-xs font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px]">search</span>Rechercher une transaction...</span><kbd class="font-label-sm text-[11px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">⌘K</kbd></button></div><div class="flex items-center gap-space-sm ml-auto"><button aria-label="Notifications" class="relative p-space-xs rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-[0_1px_3px_rgba(15,23,42,0.05)] focus:ring-2 focus:ring-primary-container" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nouvelle dépense</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover lg:hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/></div></header><main class="relative w-full pt-16 pb-24 lg:pb-space-2xl px-space-md lg:px-space-xl bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient orbs -->
+<div class="relative w-full">
+<div class="absolute -top-10 -right-8 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 left-1/3 w-80 h-80 bg-tertiary-container/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-xl">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Configuration • Finances</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Gestion des Catégories</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Personnalisez vos catégories de dépenses, structurez vos flux d'argent et ajustez vos codes couleur pour un suivi limpide.
+        </p>
+</div>
+<!-- Action controls -->
+<div class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap">
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-xl shadow-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="category-search" placeholder="Filtrer une catégorie..." type="text"/>
+</div>
+<button class="inline-flex items-center justify-center gap-space-xs h-11 px-space-lg rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-md shadow-primary-container/20 whitespace-nowrap active:scale-[0.98]" id="btn-open-create-modal">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Nouvelle catégorie</span>
+</button>
+</div>
+</div>
+<!-- Overview metric strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mb-space-xl">
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Catégories Actives</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-numeric-lg text-numeric-lg text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">100% allouées</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Décaissé (Mois)</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-numeric-lg text-numeric-lg text-on-surface">2 711,88 €</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dépenses Rattachées</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-numeric-lg text-numeric-lg text-on-surface">54</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">opérations</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Plus gros poste</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-title-md text-title-md text-on-surface truncate font-semibold">Alimentation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">33.8%</span>
+</div>
+</div>
+</div>
+<!-- Category Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg mb-space-2xl" id="category-grid">
+<!-- Card 1: Alimentation -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#10b981" data-icon="shopping_cart" data-name="Alimentation &amp; Supermarché">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary-container/15 text-primary">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Alimentation &amp; Supermarché</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">18 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">919,00 €</span>
+</div>
+<!-- Progress micro-bar -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Logement -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#3B82F6" data-icon="home" data-name="Logement &amp; Factures">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#3B82F6]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#3B82F6]/15 text-[#2563EB]">
+<span class="material-symbols-outlined text-[24px]">home</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#3B82F6] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Logement &amp; Factures</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">677,20 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#3B82F6] h-full rounded-full" style="width: 58%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3: Transports -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#8B5CF6" data-icon="directions_car" data-name="Transports &amp; Véhicule">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#8B5CF6]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#8B5CF6]/15 text-[#7C3AED]">
+<span class="material-symbols-outlined text-[24px]">directions_car</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#8B5CF6] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Transports &amp; Véhicule</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">9 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">266,05 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#8B5CF6] h-full rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 4: Loisirs & Sorties -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#F97316" data-icon="local_cafe" data-name="Loisirs &amp; Sorties">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#F97316]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#F97316]/15 text-[#EA580C]">
+<span class="material-symbols-outlined text-[24px]">local_cafe</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#F97316] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Loisirs &amp; Sorties</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">12 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">386,95 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#F97316] h-full rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 5: Santé & Soins -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#EC4899" data-icon="medical_services" data-name="Santé &amp; Soins">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#EC4899]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#EC4899]/15 text-[#DB2777]">
+<span class="material-symbols-outlined text-[24px]">medical_services</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EC4899] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Santé &amp; Soins</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">169,30 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#EC4899] h-full rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 6: Abonnements & Numérique -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#6366F1" data-icon="sync" data-name="Abonnements &amp; Numérique">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#6366F1]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#6366F1]/15 text-[#4F46E5]">
+<span class="material-symbols-outlined text-[24px]">sync</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#6366F1] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Abonnements &amp; Numérique</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">34,98 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#6366F1] h-full rounded-full" style="width: 15%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 7: Shopping & Équipement -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#06B6D4" data-icon="shopping_bag" data-name="Shopping &amp; Équipement">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#06B6D4]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#06B6D4]/15 text-[#0891B2]">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#06B6D4] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Shopping &amp; Équipement</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2 dépenses enregistrées</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">58,40 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#06B6D4] h-full rounded-full" style="width: 22%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 8: Épargne & Investissement -->
+<div class="category-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between relative overflow-hidden" data-color="#EAB308" data-icon="savings" data-name="Épargne &amp; Investissement">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#EAB308]"></div>
+<div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#EAB308]/15 text-[#CA8A04]">
+<span class="material-symbols-outlined text-[24px]">savings</span>
+</div>
+<div class="flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="btn-edit-category p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Modifier la catégorie">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-delete-category p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Supprimer la catégorie">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EAB308] flex-shrink-0"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Épargne &amp; Investissement</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1 dépense enregistrée</p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg pb-space-md rounded-b-2xl">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumul ce mois</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">200,00 €</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-[#EAB308] h-full rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Insight banner -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">lightbulb</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Besoin d'harmoniser vos budgets ?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Toutes les modifications de couleur et de libellé s'appliquent automatiquement à vos graphiques mensuels et vos règles de classification.</p>
+</div>
+</div>
+<a class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors shadow-sm whitespace-nowrap" href="#">
+        Consulter les budgets associés
+      </a>
+</div>
+</div>
+<!-- Modal / Drawer: Ajouter / Modifier une catégorie -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm transition-opacity" id="category-modal">
+<div class="relative w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden transform transition-all">
+<!-- Modal Header -->
+<div class="px-space-xl py-space-lg flex items-center justify-between bg-surface-container-low/60">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="modal-title">Ajouter une catégorie</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Renseignez le nom, l'icône et l'apparence visuelle.</p>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-on-surface rounded-xl hover:bg-surface-container transition-colors" id="btn-close-modal">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<form class="p-space-xl space-y-space-lg" id="category-form">
+<!-- Nom -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2 font-medium" for="category-name-input">Nom de la catégorie</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none shadow-sm transition-colors" id="category-name-input" placeholder="Ex. Événements, Animaux..." required="" type="text" value="Nouvelle Catégorie"/>
+</div>
+<!-- Sélecteur de couleur (10 pastilles) -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2 font-medium">Couleur associée</label>
+<div class="grid grid-cols-5 sm:grid-cols-10 gap-2" id="color-palette">
+<!-- 10 Color Swatches with emerald selected by default -->
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#10B981" style="background-color: #10B981;" type="button">
+<span class="material-symbols-outlined text-white text-[16px]">check</span>
+</button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#3B82F6" style="background-color: #3B82F6;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#8B5CF6" style="background-color: #8B5CF6;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#F97316" style="background-color: #F97316;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#EC4899" style="background-color: #EC4899;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#6366F1" style="background-color: #6366F1;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#06B6D4" style="background-color: #06B6D4;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#EAB308" style="background-color: #EAB308;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#14B8A6" style="background-color: #14B8A6;" type="button"></button>
+<button class="color-swatch w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-sm relative active:scale-95" data-color="#64748B" style="background-color: #64748B;" type="button"></button>
+</div>
+</div>
+<!-- Sélecteur d'icône (16 icônes) -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2 font-medium">Sélectionner une icône</label>
+<div class="grid grid-cols-4 sm:grid-cols-8 gap-2" id="icon-picker">
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-primary-container text-on-primary-container hover:bg-surface-container-high transition-colors shadow-sm" data-icon="shopping_cart" type="button">
+<span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="home" type="button">
+<span class="material-symbols-outlined text-[22px]">home</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="directions_car" type="button">
+<span class="material-symbols-outlined text-[22px]">directions_car</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="local_cafe" type="button">
+<span class="material-symbols-outlined text-[22px]">local_cafe</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="medical_services" type="button">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="sync" type="button">
+<span class="material-symbols-outlined text-[22px]">sync</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="shopping_bag" type="button">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="savings" type="button">
+<span class="material-symbols-outlined text-[22px]">savings</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="flight" type="button">
+<span class="material-symbols-outlined text-[22px]">flight</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="fitness_center" type="button">
+<span class="material-symbols-outlined text-[22px]">fitness_center</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="school" type="button">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="pets" type="button">
+<span class="material-symbols-outlined text-[22px]">pets</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="movie" type="button">
+<span class="material-symbols-outlined text-[22px]">movie</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="local_gas_station" type="button">
+<span class="material-symbols-outlined text-[22px]">local_gas_station</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="credit_card" type="button">
+<span class="material-symbols-outlined text-[22px]">credit_card</span>
+</button>
+<button class="icon-choice p-2 rounded-xl flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-icon="receipt_long" type="button">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</button>
+</div>
+</div>
+<!-- Toggle: Budget Global -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="pr-4">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Inclure dans le calcul du budget global</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Comptabilise ces flux dans le plafond général d'épargne.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="budget-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" id="btn-cancel-modal" type="button">
+            Annuler
+          </button>
+<button class="px-space-lg py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary shadow-sm transition-all" type="submit">
+            Enregistrer
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Toast Container logic handled cleanly inline -->
+<div class="fixed bottom-24 lg:bottom-8 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-on-surface text-inverse-on-surface shadow-xl" id="action-toast">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="action-toast-text">Action exécutée avec succès</span>
+</div>
+</div>
+<script>
+  (function() {
+    const modal = document.getElementById('category-modal');
+    const openBtn = document.getElementById('btn-open-create-modal');
+    const closeBtn = document.getElementById('btn-close-modal');
+    const cancelBtn = document.getElementById('btn-cancel-modal');
+    const form = document.getElementById('category-form');
+    const modalTitle = document.getElementById('modal-title');
+    const nameInput = document.getElementById('category-name-input');
+    const searchInput = document.getElementById('category-search');
+    const cards = document.querySelectorAll('.category-card');
+    const colorSwatches = document.querySelectorAll('.color-swatch');
+    const iconChoices = document.querySelectorAll('.icon-choice');
+    const toast = document.getElementById('action-toast');
+    const toastText = document.getElementById('action-toast-text');
+
+    let selectedColor = '#10B981';
+    let selectedIcon = 'shopping_cart';
+
+    function showToast(message) {
+      toastText.textContent = message;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+
+    function openModal(mode, data = {}) {
+      if (mode === 'edit') {
+        modalTitle.textContent = 'Modifier la catégorie';
+        nameInput.value = data.name || '';
+        selectedColor = data.color || '#10B981';
+        selectedIcon = data.icon || 'shopping_cart';
+      } else {
+        modalTitle.textContent = 'Ajouter une catégorie';
+        nameInput.value = '';
+        selectedColor = '#10B981';
+        selectedIcon = 'shopping_cart';
+      }
+
+      // Update swatch active state
+      colorSwatches.forEach(swatch => {
+        swatch.innerHTML = '';
+        if (swatch.dataset.color.toLowerCase() === selectedColor.toLowerCase()) {
+          swatch.innerHTML = '<span class="material-symbols-outlined text-white text-[16px]">check</span>';
+        }
+      });
+
+      // Update icon active state
+      iconChoices.forEach(choice => {
+        if (choice.dataset.icon === selectedIcon) {
+          choice.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          choice.classList.add('bg-primary-container', 'text-on-primary-container');
+        } else {
+          choice.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          choice.classList.remove('bg-primary-container', 'text-on-primary-container');
+        }
+      });
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    openBtn.addEventListener('click', () => openModal('create'));
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+
+    // Color Swatch Selection
+    colorSwatches.forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        colorSwatches.forEach(s => s.innerHTML = '');
+        swatch.innerHTML = '<span class="material-symbols-outlined text-white text-[16px]">check</span>';
+        selectedColor = swatch.dataset.color;
+      });
+    });
+
+    // Icon Selection
+    iconChoices.forEach(choice => {
+      choice.addEventListener('click', () => {
+        iconChoices.forEach(c => {
+          c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          c.classList.remove('bg-primary-container', 'text-on-primary-container');
+        });
+        choice.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        choice.classList.add('bg-primary-container', 'text-on-primary-container');
+        selectedIcon = choice.dataset.icon;
+      });
+    });
+
+    // Form submit
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      closeModal();
+      showToast('Catégorie enregistrée avec succès');
+    });
+
+    // Card Actions: Edit & Delete
+    document.querySelectorAll('.btn-edit-category').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.category-card');
+        openModal('edit', {
+          name: card.dataset.name,
+          color: card.dataset.color,
+          icon: card.dataset.icon
+        });
+      });
+    });
+
+    document.querySelectorAll('.btn-delete-category').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.category-card');
+        const name = card.dataset.name;
+        if (confirm(`Supprimer définitivement la catégorie "${name}" ?`)) {
+          card.style.transition = 'all 0.3s ease';
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            card.remove();
+            showToast(`Catégorie "${name}" supprimée`);
+          }, 300);
+        }
+      });
+    });
+
+    // Search filter
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        if (name.includes(term)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  })();
+</script></main></div><nav class="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50 px-space-sm flex items-center justify-around" data-active-classes="text-primary font-semibold"><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-[10px] mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[10px] mt-0.5">Dépenses</span></a><div class="flex items-center justify-center px-space-xs"><button aria-label="Ajouter une dépense" class="-mt-5 w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg shadow-primary-container/30 hover:bg-primary hover:text-on-primary transition-transform active:scale-95" type="button"><span class="material-symbols-outlined text-[26px]">add</span></button></div><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-sm text-[10px] mt-0.5">Budgets</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil-&amp;-parametres" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-[10px] mt-0.5">Profil</span></a></nav><div class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center" id="modal-root"></div><div class="fixed bottom-20 lg:bottom-6 right-4 z-50 flex flex-col gap-2 pointer-events-none" id="toast-root"></div></body></html>

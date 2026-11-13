@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#bbcabf","surface-container-low":"#eff4ff","on-tertiary-container":"#00367a","inverse-primary":"#4edea3","on-surface-variant":"#3c4a42","on-tertiary-fixed":"#001a42","on-surface":"#0b1c30","on-primary":"#ffffff","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-container":"#00422b","surface-tint":"#006c49","surface-bright":"#f8f9ff","background":"#f8f9ff","primary-container":"#10b981","surface-container-high":"#dce9ff","on-secondary-fixed":"#131b2e","surface":"#f8f9ff","on-primary-fixed":"#002113","error":"#ba1a1a","error-container":"#ffdad6","secondary":"#565e74","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-error-container":"#93000a","primary-fixed":"#6ffbbe","primary":"#006c49","outline":"#6c7a71","tertiary-fixed":"#d8e2ff","on-primary-fixed-variant":"#005236","secondary-fixed":"#dae2fd","on-error":"#ffffff","tertiary-fixed-dim":"#adc6ff","primary-fixed-dim":"#4edea3","tertiary":"#005ac2","tertiary-container":"#71a1ff","secondary-fixed-dim":"#bec6e0","on-tertiary":"#ffffff","surface-dim":"#cbdbf5","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004395","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","inverse-on-surface":"#eaf1ff","secondary-container":"#dae2fd"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem",gutter:"1.5rem","space-sm":"0.75rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-xs":"0.5rem","space-xl":"2rem","space-2xs":"0.25rem",margin:"2rem","space-lg":"1.5rem","space-2xl":"3rem"},fontFamily:{"headline-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"numeric-lg":["Inter"],"title-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"]},fontSize:{"headline-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"600"}],"numeric-lg":["2rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"title-md":["1.125rem",{lineHeight:"1.625rem",letterSpacing:"-0.005em",fontWeight:"500"}],"label-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"display-lg":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="hidden lg:flex fixed left-0 top-0 bottom-0 w-72 bg-surface-container-lowest flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="SpendWise Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">SpendWise</span></div><nav class="px-space-md py-space-sm space-y-1 flex-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Dépenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="recurrentes" href="#"><span class="material-symbols-outlined text-[20px]">sync</span><span>Récurrentes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[20px]">pie_chart</span><span>Budgets</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Catégories</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="profil-&amp;-parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Profil &amp; Paramètres</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-2xl flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sophie Laurent</span><span class="font-label-sm text-label-sm text-primary font-medium tracking-tight">Premium</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">PRO</span></div><div class="flex items-center justify-between pt-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">dark_mode</span>Mode sombre</span><button aria-label="Basculer le mode sombre" class="w-9 h-5 bg-surface-container-high rounded-full relative p-0.5 transition-colors focus:outline-none" type="button"><span class="block w-4 h-4 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform"></span></button></div></div></aside><div class="lg:pl-72"><header class="fixed top-0 left-0 lg:left-72 right-0 h-16 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm lg:hidden"><img alt="SpendWise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVGPHqYxKHPY2ENSUDthI-VijAt71RLJpehYC58Q4b6JgTL_PjAee5utO3c_YW_wasQPGVl1VySfdCyk__0gk3BQSACoEq1JgK0ZsSO8STPpzJDxnzXWeoiiFnwov1d869etAUPpIMcBFz-RgkGc8m7H9EC3DoCDVvs8ondoMcVUq_RS-DsEziK3qy4UqPpsU5DYZx08hvGrVao0Q7AVIAemj2-qLdy41kPXXo45Jy7Q"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">SpendWise</span></div><div class="hidden md:flex items-center flex-1 max-w-md"><button class="w-full flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_3px_rgba(15,23,42,0.05)] hover:bg-surface-container-low transition-colors" type="button"><span class="flex items-center gap-space-xs font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px]">search</span>Rechercher une transaction...</span><kbd class="font-label-sm text-[11px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">⌘K</kbd></button></div><div class="flex items-center gap-space-sm ml-auto"><button aria-label="Notifications" class="relative p-space-xs rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-[0_1px_3px_rgba(15,23,42,0.05)] focus:ring-2 focus:ring-primary-container" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nouvelle dépense</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover lg:hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-stsyPkP0A3_N5GFm_LtaufQC-lxthiGTkbAPZnMfNiuuv8XLQY3woCGgct0t1MA_XkzrzfpuL3jx5XVDW71Dvfg5Sb814AqL4BmWZRuo5pZVNzx539hrv2GrWo-_ihGCHZRLVb4t5nJZzuv6cMDws1gbhD4TyXmIwXh4yzh8AVpQQYoej1ePL2gziudyY59CAsZ7MpBaSGe9h1lJ0g-bXzc26WTMlskURbYyFsm"/></div></header><main class="relative w-full pt-16 pb-24 lg:pb-space-2xl px-space-md lg:px-space-xl bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<div class="fixed inset-0 z-50 bg-on-surface/85 backdrop-blur-md flex flex-col overflow-hidden text-surface-bright selection:bg-primary selection:text-on-primary">
+<!-- Top Floating Toolbar -->
+<header class="w-full h-16 px-space-md lg:px-space-xl bg-inverse-surface/80 backdrop-blur-xl flex items-center justify-between flex-shrink-0 z-20 shadow-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-xl bg-surface-container-highest/20 flex items-center justify-center flex-shrink-0 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">receipt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-label-md text-surface-bright font-semibold truncate">Ticket_Monoprix_18Mars2025.jpg</span>
+<span class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-fixed-dim font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> Vérifié
+            </span>
+</div>
+<span class="font-body-sm text-label-sm text-surface-variant/70 truncate">Importé le 18 mars 2025 à 20:14 · 1.4 Mo · Scan HD</span>
+</div>
+</div>
+<!-- Controls & Actions -->
+<div class="flex items-center gap-space-xs sm:gap-space-sm">
+<!-- Zoom & Rotation Group -->
+<div class="flex items-center bg-surface-container-highest/30 rounded-xl p-0.5">
+<button aria-label="Zoom arrière" class="p-2 text-surface-bright/80 hover:text-surface-bright hover:bg-surface-container-highest/40 rounded-lg transition-colors" id="zoom-out-btn" title="Zoom arrière (-)">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<span class="font-label-sm text-label-sm px-2 text-surface-bright/70 select-none min-w-[3.5rem] text-center" id="zoom-level">100%</span>
+<button aria-label="Zoom avant" class="p-2 text-surface-bright/80 hover:text-surface-bright hover:bg-surface-container-highest/40 rounded-lg transition-colors" id="zoom-in-btn" title="Zoom avant (+)">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<div class="w-[1px] h-4 bg-surface-variant/20 mx-1"></div>
+<button aria-label="Pivoter de 90 degrés" class="p-2 text-surface-bright/80 hover:text-surface-bright hover:bg-surface-container-highest/40 rounded-lg transition-colors" id="rotate-btn" title="Rotation horaire 90°">
+<span class="material-symbols-outlined text-[18px]">rotate_right</span>
+</button>
+</div>
+<!-- Download Action -->
+<button class="hidden md:inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-highest/40 hover:bg-surface-container-highest/60 text-surface-bright font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Télécharger</span>
+</button>
+<!-- Close Modal -->
+<button aria-label="Fermer le visualiseur" class="p-2 rounded-xl text-surface-bright/70 hover:text-surface-bright hover:bg-error/30 transition-colors ml-1 sm:ml-2" id="close-modal-btn">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Split View -->
+<div class="flex-1 flex flex-col lg:flex-row min-h-0 overflow-hidden relative">
+<!-- Left Panel: Interactive Zoomable Preview -->
+<section class="flex-1 relative flex items-center justify-center p-space-md lg:p-space-xl overflow-hidden bg-on-background/40 select-none">
+<!-- Background Grid Matrix Canvas for CAD / Inspector Feel -->
+<div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(circle, #dce9ff 1px, transparent 1px); background-size: 24px 24px;"></div>
+<!-- Pan and Zoom Stage -->
+<div class="relative max-w-full max-h-full transition-transform duration-200 ease-out origin-center flex items-center justify-center" id="receipt-stage">
+<!-- Realistic Thermal Receipt Sheet -->
+<div class="relative w-80 sm:w-96 bg-surface-container-lowest text-on-surface shadow-2xl rounded-sm p-6 sm:p-8 flex flex-col gap-4 font-mono select-text transition-all duration-300 ring-1 ring-surface-variant/20">
+<!-- Top jagged tear illusion -->
+<div class="absolute -top-1.5 left-0 right-0 h-2 bg-repeat-x pointer-events-none opacity-90" style="background-image: radial-gradient(circle, transparent 4px, #ffffff 4px); background-size: 10px 10px; background-position: -5px -5px;"></div>
+<!-- Receipt Header -->
+<div class="flex flex-col items-center text-center pb-3 border-b-2 border-dashed border-outline-variant/40">
+<span class="material-symbols-outlined text-[32px] text-on-surface mb-1">local_mall</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider font-bold">MONOPRIX</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Madeleine - Paris 8ème</span>
+<span class="font-label-sm text-label-sm text-secondary">35 Boulevard de la Madeleine</span>
+<span class="font-label-sm text-label-sm text-secondary mt-1">SIRET : 421 890 120 00142</span>
+</div>
+<!-- Receipt Meta -->
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>18/03/2025 19:42</span>
+<span>Caisse #04 · Tkt: 9841</span>
+</div>
+<!-- Receipt Items -->
+<div class="flex flex-col gap-2 py-2 border-b-2 border-dashed border-outline-variant/40 text-sm">
+<div class="flex justify-between items-baseline">
+<span class="truncate pr-2">Pain de mie complet</span>
+<span class="font-semibold tabular-nums">1.45 €</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="truncate pr-2">Fruits de saison BIO</span>
+<span class="font-semibold tabular-nums">6.20 €</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="truncate pr-2">Fromage Comté AOP 250g</span>
+<span class="font-semibold tabular-nums">4.80 €</span>
+</div>
+<div class="flex justify-between items-baseline text-on-surface-variant">
+<span class="truncate pr-2">Épicerie &amp; Divers (x4)</span>
+<span class="font-semibold tabular-nums">18.95 €</span>
+</div>
+<div class="flex justify-between items-baseline text-on-surface-variant">
+<span class="truncate pr-2">Boissons fraîches (x3)</span>
+<span class="font-semibold tabular-nums">14.50 €</span>
+</div>
+</div>
+<!-- Receipt Totals -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex justify-between items-baseline font-bold text-lg">
+<span class="uppercase">TOTAL EUR</span>
+<span class="text-xl tabular-nums tracking-tight">45.90 €</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant pt-1">
+<span>RÈGLEMENT : CARTE BANCAIRE</span>
+<span class="font-medium">45.90 €</span>
+</div>
+</div>
+<!-- Taxes Breakdown -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1 text-[11px] text-on-surface-variant">
+<div class="flex justify-between font-semibold">
+<span>Taux TVA</span>
+<span>Base HT</span>
+<span>Montant TVA</span>
+</div>
+<div class="flex justify-between">
+<span>TVA 5.5%</span>
+<span>40.00 €</span>
+<span>2.20 €</span>
+</div>
+<div class="flex justify-between">
+<span>TVA 20.0%</span>
+<span>4.00 €</span>
+<span>0.80 €</span>
+</div>
+</div>
+<!-- Barcode & Bottom Signature -->
+<div class="flex flex-col items-center pt-2 gap-1 text-center">
+<!-- SVG Stylized Barcode -->
+<svg class="w-48 h-9 text-on-surface" fill="currentColor" viewbox="0 0 160 30">
+<rect height="30" width="3" x="0" y="0"></rect>
+<rect height="30" width="1" x="5" y="0"></rect>
+<rect height="30" width="4" x="8" y="0"></rect>
+<rect height="30" width="2" x="15" y="0"></rect>
+<rect height="30" width="1" x="19" y="0"></rect>
+<rect height="30" width="5" x="23" y="0"></rect>
+<rect height="30" width="2" x="31" y="0"></rect>
+<rect height="30" width="4" x="36" y="0"></rect>
+<rect height="30" width="1" x="43" y="0"></rect>
+<rect height="30" width="3" x="47" y="0"></rect>
+<rect height="30" width="5" x="53" y="0"></rect>
+<rect height="30" width="2" x="61" y="0"></rect>
+<rect height="30" width="1" x="66" y="0"></rect>
+<rect height="30" width="4" x="70" y="0"></rect>
+<rect height="30" width="2" x="77" y="0"></rect>
+<rect height="30" width="3" x="82" y="0"></rect>
+<rect height="30" width="5" x="88" y="0"></rect>
+<rect height="30" width="1" x="96" y="0"></rect>
+<rect height="30" width="4" x="100" y="0"></rect>
+<rect height="30" width="2" x="107" y="0"></rect>
+<rect height="30" width="1" x="112" y="0"></rect>
+<rect height="30" width="5" x="116" y="0"></rect>
+<rect height="30" width="3" x="124" y="0"></rect>
+<rect height="30" width="1" x="130" y="0"></rect>
+<rect height="30" width="4" x="134" y="0"></rect>
+<rect height="30" width="2" x="141" y="0"></rect>
+<rect height="30" width="3" x="146" y="0"></rect>
+<rect height="30" width="5" x="152" y="0"></rect>
+<rect height="30" width="1" x="159" y="0"></rect>
+</svg>
+<span class="font-label-sm text-[10px] tracking-widest text-secondary">009841-2025-03-18-MONOPRIX</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Merci de votre visite · À bientôt</span>
+</div>
+<!-- OCR Scanner Interactive Reticle Indicator -->
+<div class="absolute inset-0 pointer-events-none rounded-sm overflow-hidden">
+<div class="w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-80 animate-pulse top-1/3 absolute"></div>
+</div>
+</div>
+</div>
+<!-- Float Hint Navigation Bar -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 px-space-md py-1.5 rounded-full bg-inverse-surface/85 backdrop-blur-md shadow-lg flex items-center gap-space-sm text-surface-bright/70 font-label-sm text-[12px] pointer-events-none">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">touch_app</span> Molette / Glisser pour naviguer
+          </span>
+<span class="opacity-40">·</span>
+<span>Double-clic pour réinitialiser</span>
+</div>
+</section>
+<!-- Right Panel: SpendWise AI OCR Inspector -->
+<aside class="w-full lg:w-[460px] xl:w-[480px] bg-surface-container-lowest flex flex-col justify-between flex-shrink-0 z-10 shadow-xl overflow-y-auto">
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- OCR Engine Status Badge & Live Confidence Bar -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Extraction SpendWise IA</span>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-primary-container/15 text-primary font-label-sm text-[12px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                99.4% confiance
+              </span>
+</div>
+<!-- Mini Progress bar -->
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-[99.4%] transition-all duration-500"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Toutes les données structurées ont été validées automatiquement avec votre compte courant.
+            </p>
+</div>
+<!-- Structured Fields Extraction List -->
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-label-sm text-label-sm uppercase font-bold tracking-wider text-secondary">
+              Données reconnues du ticket
+            </h3>
+<!-- Extracted Total Amount Hero Widget -->
+<div class="p-space-md rounded-2xl bg-surface-bright flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Montant total extrait</span>
+<span class="font-numeric-lg text-display-lg text-on-surface font-bold tracking-tight">45,90 €</span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+</div>
+<!-- Merchant Field -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary">Commerçant</span>
+<span class="font-body-md text-label-md font-semibold text-on-surface truncate">Monoprix Madeleine</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Paris 8ème (Île-de-France)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] ml-2 flex-shrink-0">check_circle</span>
+</div>
+<!-- Date & Time Field -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Date &amp; Heure</span>
+<span class="font-body-md text-label-md font-semibold text-on-surface">18/03/2025 à 19:42</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] ml-2 flex-shrink-0">check_circle</span>
+</div>
+<!-- Category Assignment -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary">Catégorie attribuée</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-body-md text-label-md font-semibold text-on-surface truncate">Alimentation &amp; Courses</span>
+</div>
+</div>
+</div>
+<button aria-label="Changer de catégorie" class="text-tertiary hover:underline font-label-sm text-label-sm font-semibold flex-shrink-0">Modifier</button>
+</div>
+<!-- Tax / TVA Details Box -->
+<div class="p-space-md rounded-2xl bg-surface-bright flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Ventilation TVA détectée</span>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="bg-surface-container-low p-2 rounded-xl flex flex-col">
+<div class="flex justify-between items-center text-label-sm text-on-surface-variant font-medium">
+<span>TVA 5,5%</span>
+<span class="text-primary font-bold">2,20 €</span>
+</div>
+<span class="text-[11px] text-secondary mt-0.5">Produits alimentaires</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-xl flex flex-col">
+<div class="flex justify-between items-center text-label-sm text-on-surface-variant font-medium">
+<span>TVA 20%</span>
+<span class="text-primary font-bold">0,80 €</span>
+</div>
+<span class="text-[11px] text-secondary mt-0.5">Boissons &amp; autres</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Linked Transaction Card -->
+<div class="rounded-2xl p-space-md bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Dépense associée</span>
+<span class="font-label-sm text-[11px] text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">link</span> Synchronisé
+              </span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">CB Monoprix Paris</span>
+<span class="font-label-sm text-label-sm text-secondary">Compte Courant BNP ···8491</span>
+</div>
+</div>
+<span class="font-headline-sm text-title-md font-bold text-on-surface tabular-nums ml-2 flex-shrink-0">-45,90 €</span>
+</div>
+<a class="inline-flex items-center gap-1 text-tertiary hover:text-on-tertiary-container font-label-md text-label-md font-semibold transition-colors mt-0.5" href="#">
+<span>Modifier la transaction associée</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Sticky Footer Quick Action Buttons -->
+<div class="p-space-lg bg-surface-container-lowest shadow-[0_-4px_16px_rgba(0,0,0,0.03)] flex flex-col gap-space-xs">
+<div class="flex gap-space-sm">
+<button class="flex-1 flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors" id="rescan-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Re-scanner</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all" id="replace-file-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Remplacer</span>
+</button>
+</div>
+<p class="text-center font-label-sm text-[11px] text-secondary mt-1">
+            Certifié conforme à l'article L. 102 B du LPF pour l'archivage probant.
+          </p>
+</div>
+</aside>
+</div>
+</div>
+<script>
+    (function initReceiptViewer() {
+      let currentZoom = 1;
+      let currentRotation = 0;
+      const stage = document.getElementById('receipt-stage');
+      const zoomLevelLabel = document.getElementById('zoom-level');
+      const zoomInBtn = document.getElementById('zoom-in-btn');
+      const zoomOutBtn = document.getElementById('zoom-out-btn');
+      const rotateBtn = document.getElementById('rotate-btn');
+      const closeBtn = document.getElementById('close-modal-btn');
+      const rescanBtn = document.getElementById('rescan-btn');
+
+      function updateTransform() {
+        if (!stage) return;
+        stage.style.transform = `scale(${currentZoom}) rotate(${currentRotation}deg)`;
+        if (zoomLevelLabel) {
+          zoomLevelLabel.textContent = `${Math.round(currentZoom * 100)}%`;
+        }
+      }
+
+      if (zoomInBtn) {
+        zoomInBtn.addEventListener('click', () => {
+          if (currentZoom < 2.5) {
+            currentZoom = Math.min(2.5, currentZoom + 0.25);
+            updateTransform();
+          }
+        });
+      }
+
+      if (zoomOutBtn) {
+        zoomOutBtn.addEventListener('click', () => {
+          if (currentZoom > 0.5) {
+            currentZoom = Math.max(0.5, currentZoom - 0.25);
+            updateTransform();
+          }
+        });
+      }
+
+      if (rotateBtn) {
+        rotateBtn.addEventListener('click', () => {
+          currentRotation = (currentRotation + 90) % 360;
+          updateTransform();
+        });
+      }
+
+      if (stage) {
+        stage.addEventListener('dblclick', () => {
+          currentZoom = 1;
+          currentRotation = 0;
+          updateTransform();
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          const modalRoot = stage ? stage.closest('.fixed') : null;
+          if (modalRoot) {
+            modalRoot.style.opacity = '0';
+            modalRoot.style.transition = 'opacity 0.2s ease-out';
+            setTimeout(() => {
+              modalRoot.style.display = 'none';
+            }, 200);
+          }
+        });
+      }
+
+      if (rescanBtn) {
+        rescanBtn.addEventListener('click', () => {
+          rescanBtn.classList.add('animate-pulse');
+          setTimeout(() => {
+            rescanBtn.classList.remove('animate-pulse');
+          }, 1200);
+        });
+      }
+    })();
+  </script>
+</div></main></div><nav class="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50 px-space-sm flex items-center justify-around" data-active-classes="text-primary font-semibold"><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-[10px] mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="depenses" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[10px] mt-0.5">Dépenses</span></a><div class="flex items-center justify-center px-space-xs"><button aria-label="Ajouter une dépense" class="-mt-5 w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg shadow-primary-container/30 hover:bg-primary hover:text-on-primary transition-transform active:scale-95" type="button"><span class="material-symbols-outlined text-[26px]">add</span></button></div><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="budgets" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-sm text-[10px] mt-0.5">Budgets</span></a><a class="flex flex-col items-center justify-center flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil-&amp;-parametres" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-[10px] mt-0.5">Profil</span></a></nav><div class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center" id="modal-root"></div><div class="fixed bottom-20 lg:bottom-6 right-4 z-50 flex flex-col gap-2 pointer-events-none" id="toast-root"></div></body></html>

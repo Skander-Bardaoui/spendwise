@@ -1,0 +1,1 @@
+-- Données de seed exécutées avec `npx supabase db reset`.
