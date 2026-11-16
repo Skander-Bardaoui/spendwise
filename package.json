@@ -1,7 +1,8 @@
 {
-  "name": "budget",
+  "name": "spendwise",
   "private": true,
   "version": "0.0.0",
+  "description": "SpendWise — personal expense tracker with budgets, recurring expenses, CSV import, receipts and reports (React + Supabase).",
   "workspaces": [
     "frontend"
   ],
